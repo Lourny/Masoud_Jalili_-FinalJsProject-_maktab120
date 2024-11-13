@@ -17,7 +17,7 @@ export default function onboardingPage5() {
                         }
                     ),
                        ce("div",{
-                           className:"w-full flex flex-row items-center justify-center gap-1.5",
+                           className:"w-full flex flex-row items-center justify-center gap-1.5 ",
                            children:[
                                ce("div", {
                                    className: "navigation w-[30px] h-[23px] py-2.5",
