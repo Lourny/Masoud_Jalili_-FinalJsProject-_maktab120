@@ -7,7 +7,7 @@ export function ce(name, {className = "", children = [], events = {}, restAttrs 
         element.addEventListener(eventKey, events[eventKey]);
     });
     children.forEach(child => {
-        element.appendChild(child);
+        element.append(child);
     });
     Object.keys(restAttrs).forEach(restAttrsKey => {
         element.setAttribute(restAttrsKey, restAttrs[restAttrsKey]);

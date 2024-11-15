@@ -567,6 +567,7 @@
         "teal",
         "gray"
       ],
+      "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/6.webp"
     },
     {
@@ -1093,7 +1094,7 @@
     {
       "id": "6",
       "brand": "Puma",
-      "images": "http://localhost:5173/logo/PUMA.png"
+      "images": "http://localhost:5173/logo/puma.png"
     },
     {
       "id": "7",

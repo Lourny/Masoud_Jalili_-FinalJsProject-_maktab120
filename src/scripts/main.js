@@ -1,3 +1,4 @@
+
 import {ce} from "../Utils/create-element.js";
 import fe from "../Utils/findElements.js";
 import loadingPage from "../pages/LoadingPage.js";
@@ -13,7 +14,14 @@ import searchInput from "../components/searchInput.js";
 import most from "../pages/homeMostNav.js";
 import footer from "../pages/footer.js";
 import home from "../pages/home.js";
-let welcome = fe("welcome");
-welcome.className = "w-full h-dvh";
-welcome.appendChild(home());
+import fetchAdiddasProducts from "../pages/fetchAdiddasProducts.js";
+import {App} from "../App.js";
+import { router } from "./../routes/router.js";
+const root = fe("app");
+root.className="w-full h-screen";
+root.appendChild(App());
+router.resolve();
+// let welcome = fe("app");
+// welcome.className = "w-full h-dvh";
+// welcome.appendChild(home());
 
