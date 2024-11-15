@@ -839,5 +839,40 @@
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/8.webp"
     }
+  ],
+  "productsLogo": [
+    {
+      "id": "1",
+      "brand": "Adidas",
+      "images": "http://localhost:5173/logo/adidas.png"
+    },   {
+      "id": "2",
+      "brand": "Asics",
+      "images": "http://localhost:5173/logo/asics.png"
+    },   {
+      "id": "3",
+      "brand": "Converse",
+      "images": "http://localhost:5173/logo/converse.png"
+    },   {
+      "id": "4",
+      "brand": "NewBalance",
+      "images": "http://localhost:5173/logo/newBalance.png"
+    },   {
+      "id": "5",
+      "brand": "Nike",
+      "images": "http://localhost:5173/logo/nike.png"
+    },   {
+      "id": "6",
+      "brand": "Puma",
+      "images": "http://localhost:5173/logo/PUMA.png"
+    },   {
+      "id": "7",
+      "brand": "Reebok",
+      "images": "http://localhost:5173/logo/reebok.png"
+    },   {
+      "id": "8",
+      "brand": "more",
+      "images": "http://localhost:5173/logo/more.png"
+    }
   ]
 }
