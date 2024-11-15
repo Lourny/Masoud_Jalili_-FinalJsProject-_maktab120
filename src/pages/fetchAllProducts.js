@@ -6,7 +6,7 @@ import cardElement from "../components/card.js";
 
 export default function fetchAllProducts() {
     let home=ce("div",{
-        className:"w-full px-6 pt-6 flex flex-wrap  justify-center items-center gap-4"
+        className:"w-full pt-6 flex flex-wrap  justify-center items-center gap-4"
     });
     getProductsList().then(products=>{
         products.forEach(product=>{

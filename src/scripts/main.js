@@ -11,7 +11,9 @@ import getProduct from "../api/products.api.js";
 import fetchAllLogo from "../pages/fetchLogo.js";
 import searchInput from "../components/searchInput.js";
 import most from "../pages/homeMostNav.js";
+import footer from "../pages/footer.js";
+import home from "../pages/home.js";
 let welcome = fe("welcome");
 welcome.className = "w-full h-dvh";
-welcome.appendChild(most());
+welcome.appendChild(home());
 

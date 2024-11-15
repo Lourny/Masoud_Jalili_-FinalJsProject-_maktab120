@@ -6,7 +6,7 @@ import logoElements from "../components/logoElements.js";
 
 export default function fetchAllLogo() {
     let logoContainer=ce("div",{
-        className:"logoContainer px-2 py-3 flex flex-row justify-center items-center flex-wrap gap-10"
+        className:"logoContainer  py-3 flex flex-row justify-center items-center flex-wrap gap-10 mb-4 mt-2.5"
     });
     getProductsLogo().then(logos=>{
         logos.forEach(logo=>{
