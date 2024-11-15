@@ -9,7 +9,9 @@ import login from "../pages/login.js";
 import fetchAllProducts from "../pages/fetchAllProducts.js";
 import getProduct from "../api/products.api.js";
 import fetchAllLogo from "../pages/fetchLogo.js";
+import searchInput from "../components/searchInput.js";
+import most from "../pages/homeMostNav.js";
 let welcome = fe("welcome");
 welcome.className = "w-full h-dvh";
-welcome.appendChild(fetchAllLogo());
+welcome.appendChild(most());
 

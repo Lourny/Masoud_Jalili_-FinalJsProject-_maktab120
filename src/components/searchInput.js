@@ -3,11 +3,10 @@ import input from "./input.js";
 
 export default function searchInput() {
     let searchInput = ce("div", {
-        className: "flex flex-row ",
+        className: "w-full h-10 flex flex-row justify-center items-center gap-1",
         children: [
-            ce("img", {
-                restAttrs: {src: "./src/assets/image/search.png", id: "searchBtn"},
-                className: "w-[50px] h-[50px] bg-white p-1 rounded-tl-md rounded-bl-md cursor-pointer",
+            ce("i",{
+                className:"fa-solid fa-search text-[#6C757D] w-1/12 text-end"
             })
             , input()]
 
