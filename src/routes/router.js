@@ -14,14 +14,16 @@ import login from "../pages/login.js";
 import home from "../pages/home.js";
 import fe from "../Utils/findElements.js";
 import fetchByTitle from "../pages/fetchByTitle.js";
+import fetchCardByImage from "../api/fetchCardByImage.js";
+import fetchCardDetail from "../pages/fetchCardDetail";
 
 
 export const router = new Navigo("/");
 
-const changeContents = (target,data) => {
+const changeContents = (page, data) => {
     const root = fe("rootsEl");
     root.innerHTML = "";
-    root.append(target(data));
+    root.append(page(data));
 };
 const changeContents2 = (page, data) => {
     page(data).then((response => {
@@ -60,16 +62,18 @@ router
 
     //router home
     .on("/home/:brand", (params) => {
-        changeContents(home,params);
+        changeContents(home, params);
     })
     .on("/home", () => {
         changeContents(home);
     })
 
     .on("/test/:brand", (params) => {
-        changeContents2(productFilterByLogo,params);
+        changeContents2(productFilterByLogo, params);
     })
 
-.on("filterbytitle/:brand",(params)=>{
-    changeContents(fetchByTitle,params);
+    .on("filterbytitle/:brand", (params) => {
+        changeContents(fetchByTitle, params);
+    }).on("/card/:id", (params) => {
+    changeContents(fetchCardDetail, params);
 });
