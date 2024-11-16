@@ -11,10 +11,10 @@ function createSize(product){
   });
   product.size.forEach(sizeNum=>{
      let sizeElem=ce("div",{
-      className:"rounded-full w-5 h-5 p-3 border-solid border-2 border-slate-800 flex justify-center items-center",
+      className:"rounded-full w-5 h-5 p-3 border-solid border-[2px] border-slate-400 flex justify-center items-center",
       children:[ce("p",{
         innerText:sizeNum,
-        className:"text-xs font-bold"
+        className:"text-xs font-bold text-slate-500"
       })]
     });
      sizeContainer.appendChild(sizeElem);
@@ -30,7 +30,7 @@ function createColor(product){
     let colorHashVar=(`bg-${colorHash}-300`).toString();
     clog(colorHashVar);
     let sizeElem=ce("div",{
-      className:`rounded-full ${colorHashVar} w-5 h-5 p-3 border-solid border-2 border-slate-800 flex justify-center items-center `,
+      className:`rounded-full ${colorHashVar} w-5 h-5 p-3 border-solid border-2 border-${colorHashVar}-800 flex justify-center items-center `,
       children:[],
     });
     colorContainer.appendChild(sizeElem);
@@ -50,10 +50,10 @@ export default function fetchCardDetail(data = {}) {
       clog(product);
 
       let test3 = ce("div", {
-        className: "detailContainer w-full h-screen flex flex-col ",
+        className: "detailContainer w-full h-screen flex flex-col gap-5  ",
         children: [
           ce("div", {
-            className: "w-full h-1/3",
+            className: "w-full h-3/8",
             children: [
               ce("i", {
                 className: "fa-solid fa-backward cursor-pointer absolute top-2 left-2 ",
@@ -70,10 +70,10 @@ export default function fetchCardDetail(data = {}) {
             ],
           }),
           ce("div", {
-            className: "infoContainer  w-full h-2/3 px-6 ",
+            className: "infoContainer  w-full h-5/8 px-6 ",
             children: [
               ce("div", {
-                className: "w-full h-1/4 relative mb-3 after:absolute pb-3 after:w-full after:h-full  after:top-0 after:left-0 after:border-b-2 after:border-b-solid after:border-b-slate-300 ",
+                className: "w-full h-1/4 relative mb-3 after:absolute pb-3 after:w-full after:h-full  after:top-0 after:left-0 after:border-b-2 after:border-b-solid after:border-b-slate-100 ",
                 children: [
                     //div for heart
                     ce("div",{
@@ -91,7 +91,7 @@ export default function fetchCardDetail(data = {}) {
                     children: [
                       ce("div", {
                         className:
-                          "w-1/6  bg-slate-200 rounded-lg flex justify-center items-center px-1 py-1",
+                          "w-1/4  bg-slate-200 rounded-lg flex justify-center items-center px-1 py-1",
                         children: [
                           ce("p", {
                             className: "font-bold text-[11px] text-slate-700",
@@ -181,33 +181,34 @@ export default function fetchCardDetail(data = {}) {
 
                     ],
                   }),
+
+                ],
+              }),ce("div", {
+                className: "numberSection  flex gap-3 w-full h-10 justify-start items-center mt-5",
+                children: [
+                  ce("h3", {
+                    className: "font-bold",
+                    innerText: "Quantity",
+                  }),
                   ce("div", {
-                    className: "numberSection",
+                    className: "w-1/3 rounded-2xl bg-slate-300 flex justify-center items-center px-2 py-[4.5px]",
                     children: [
-                      ce("h3", {
-                        className: "",
-                        innerText: "Quantity",
+                      ce("i", {
+                        className: "fa-solid fa-plus text-xs",
                       }),
                       ce("div", {
-                        className: "",
-                        children: [
-                          ce("i", {
-                            className: "",
-                          }),
-                          ce("div", {
-                            className: "",
-                          }),
-                          ce("i", {
-                            className: "",
-                          }),
-                        ],
+                        className: "w-2/4 text-center font-bold",
+                        innerText:"3"
+                      }),
+                      ce("i", {
+                        className: "fa-solid fa-minus text-xs",
                       }),
                     ],
                   }),
                 ],
               }),
               ce("div", {
-                className: "payment",
+                className: "payment relative after:absolute py-3 mt-3 after:w-full after:h-full  after:top-0 after:left-0 after:border-t-2 after:border-b-solid after:border-t-slate-100 ",
                 children: [
                   ce("div", {
                     className: "",
