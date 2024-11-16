@@ -3,8 +3,7 @@ import {router} from "../routes/router.js";
 function titleChange(e){
     e.target.className+="bg-[#343A40] text-white";
    let endpoint=e.target.innerText.toLowerCase();
-
-
+   router.navigate(`home/${endpoint}`);
 }
 
 export default function navbarTitle(logo) {

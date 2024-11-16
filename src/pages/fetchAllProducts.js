@@ -4,11 +4,11 @@ import getProductsList from "../api/products.api.js";
 import cardElement from "../components/card.js";
 
 
-export default function fetchAllProducts() {
+export default function fetchAllProducts(data) {
     let home=ce("div",{
         className:"w-full pt-6 flex flex-wrap  justify-center items-center gap-4"
     });
-    getProductsList().then(products=>{
+    getProductsList(data).then(products=>{
         products.forEach(product=>{
             let card=cardElement(product);
             home.appendChild(card);
