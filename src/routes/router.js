@@ -13,21 +13,22 @@ import login from "../pages/login.js";
 //import home
 import home from "../pages/home.js";
 import fe from "../Utils/findElements.js";
+import fetchByTitle from "../pages/fetchByTitle.js";
 
 
 export const router = new Navigo("/");
 
-const changeContents = (target) => {
+const changeContents = (target,data) => {
     const root = fe("rootsEl");
     root.innerHTML = "";
-    root.append(target());
+    root.append(target(data));
 };
-const changeContents2 = (target, item) => {
-    target(item).then((res) => {
+const changeContents2 = (page, data) => {
+    page(data).then((response => {
         const root = document.getElementById("rootsEl");
         root.innerHTML = "";
-        root.appendChild(res);
-    });
+        root.append(response);
+    }))
 };
 
 router
@@ -64,4 +65,8 @@ router
 
     .on("/test/:brand", (params) => {
         changeContents2(productFilterByLogo,params);
-    });
+    })
+
+.on("filterbytitle/:brand",(params)=>{
+    changeContents(fetchByTitle,params);
+});

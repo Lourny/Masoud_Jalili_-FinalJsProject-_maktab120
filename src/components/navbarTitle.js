@@ -1,5 +1,11 @@
 import {ce} from "../Utils/create-element.js";
+import {router} from "../routes/router.js";
+function titleChange(e){
+    e.target.className+="bg-[#343A40] text-white";
+   let endpoint=e.target.innerText.toLowerCase();
 
+
+}
 
 export default function navbarTitle(logo) {
     let items = ce("div",{
@@ -9,7 +15,10 @@ export default function navbarTitle(logo) {
                 innerText:logo.brand,
                 className:"font-bold leading-5 text-base "
             })
-        ]
+        ],
+        events:{
+            "click":titleChange
+        }
     })
     return items;
 }
