@@ -11,10 +11,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
+        "orange",
+        "sky",
         "yellow",
-        "gray"
+        "indigo"
       ],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/1.webp"
@@ -30,10 +30,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/2.webp"
@@ -49,10 +49,10 @@
         40
       ],
       "color": [
-        "red",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/3.webp"
@@ -68,10 +68,10 @@
         39
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/4.webp"
@@ -87,10 +87,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/5.webp"
@@ -106,10 +106,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/6.webp"
@@ -125,10 +125,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/7.webp"
@@ -144,10 +144,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "adidas",
       "images": "http://localhost:5173/products/adidas/8.webp"
@@ -163,10 +163,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/1.webp"
@@ -182,10 +182,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/2.webp"
@@ -201,10 +201,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/3.webp"
@@ -220,10 +220,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/4.webp"
@@ -239,10 +239,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/5.webp"
@@ -258,10 +258,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/6.webp"
@@ -277,10 +277,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/7.webp"
@@ -296,10 +296,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "asics",
       "images": "http://localhost:5173/products/asics/8.webp"
@@ -315,10 +315,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/1.jpg"
@@ -334,10 +334,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/2.jpg"
@@ -353,10 +353,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/3.jpg"
@@ -372,10 +372,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/4.jpg"
@@ -391,10 +391,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/5.jpg"
@@ -410,10 +410,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/6.jpg"
@@ -429,10 +429,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/7.jpg"
@@ -448,10 +448,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "converse",
       "images": "http://localhost:5173/products/converse/8.jpg"
@@ -467,10 +467,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/1.webp"
@@ -486,10 +486,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/2.webp"
@@ -505,10 +505,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/3.webp"
@@ -524,10 +524,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/4.webp"
@@ -543,10 +543,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/5.webp"
@@ -562,10 +562,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/6.webp"
@@ -581,10 +581,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/7.webp"
@@ -600,10 +600,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "newbalance",
       "images": "http://localhost:5173/products/newbalance/8.webp"
@@ -619,10 +619,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/1.webp"
@@ -638,10 +638,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/2.webp"
@@ -657,10 +657,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/3.webp"
@@ -676,10 +676,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/4.webp"
@@ -695,10 +695,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/5.webp"
@@ -714,10 +714,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/6.webp"
@@ -733,10 +733,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/7.webp"
@@ -752,10 +752,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "nike",
       "images": "http://localhost:5173/products/nike/8.webp"
@@ -771,10 +771,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/1.webp"
@@ -790,10 +790,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/2.webp"
@@ -809,10 +809,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/3.webp"
@@ -828,10 +828,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/4.webp"
@@ -847,10 +847,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/5.webp"
@@ -866,10 +866,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/6.webp"
@@ -885,10 +885,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/7.webp"
@@ -904,10 +904,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "puma",
       "images": "http://localhost:5173/products/puma/8.webp"
@@ -923,10 +923,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/1.webp"
@@ -942,10 +942,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/2.webp"
@@ -961,10 +961,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/3.webp"
@@ -980,10 +980,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/4.webp"
@@ -999,10 +999,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/5.webp"
@@ -1018,10 +1018,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/6.webp"
@@ -1037,10 +1037,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/7.webp"
@@ -1056,10 +1056,10 @@
         40
       ],
       "color": [
-        "rose",
-        "emerald",
-        "teal",
-        "gray"
+        "orange",
+        "sky",
+        "green",
+        "indigo"
       ],
       "brand": "reebok",
       "images": "http://localhost:5173/products/reebok/8.webp"

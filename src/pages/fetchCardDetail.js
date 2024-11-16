@@ -22,6 +22,23 @@ function createSize(product){
   return sizeContainer;
 }
 
+function createColor(product){
+  let colorContainer=ce("div",{
+    className:"w-full flex flex-row justify-center items-center gap-2"
+  });
+  product.color.forEach(colorHash=>{
+    let colorHashVar=(`bg-${colorHash}-300`).toString();
+    clog(colorHashVar);
+    let sizeElem=ce("div",{
+      className:`rounded-full ${colorHashVar} w-5 h-5 p-3 border-solid border-2 border-slate-800 flex justify-center items-center `,
+      children:[],
+    });
+    colorContainer.appendChild(sizeElem);
+  })
+
+  return colorContainer;
+}
+
 
 
 export default function fetchCardDetail(data = {}) {
@@ -53,7 +70,7 @@ export default function fetchCardDetail(data = {}) {
             ],
           }),
           ce("div", {
-            className: "infoContainer  w-full bg-orange-300 h-2/3 px-6 ",
+            className: "infoContainer  w-full h-2/3 px-6 ",
             children: [
               ce("div", {
                 className: "w-full h-1/4 relative mb-3 after:absolute pb-3 after:w-full after:h-full  after:top-0 after:left-0 after:border-b-2 after:border-b-solid after:border-b-slate-300 ",
@@ -105,7 +122,7 @@ export default function fetchCardDetail(data = {}) {
                   }),
                 ],
               }),    ce("div", {
-                className: "detailMiddlePart bg-pink-200",
+                className: "detailMiddlePart ",
                 children: [
                   ce("div", {
                     className: "",
@@ -125,10 +142,11 @@ export default function fetchCardDetail(data = {}) {
                     className: "selectSection",
                     children: [
                       ce("div", {
-                        className: "w-full bg-green-200 mt-2",
+                        className: "w-full mt-2 flex ",
                         children: [
+                            //size
                           ce("div",{
-                            className:"w-1/2 flex flex-col justify-center items-start gap-2 bg-red-300",
+                            className:"w-1/2 flex flex-col justify-center items-start gap-2 ",
                             children:[
                               ce("h3", {
                                 className: "font-bold",
@@ -140,22 +158,27 @@ export default function fetchCardDetail(data = {}) {
                                 ]
                               }),
                             ]
-                          })
+                          }),
+                            //color
+                          ce("div", {
+                            className: "colorsSection w-1/2 flex flex-col justify-center items-start gap-2 ",
+                            children: [
+                              ce("h3", {
+                                className: "font-bold",
+                                innerText: "Color",
+                              }),
+                              ce("ul", {
+                                className: "",
+                                innerText:"",
+                                children:[
+                                  createColor(product)
+                                ]
+                              }),
+                            ],
+                          }),
                         ],
                       }),
-                      ce("div", {
-                        className: "colorsSection",
-                        children: [
-                          ce("h3", {
-                            className: "",
-                            innerText: "Color",
-                          }),
-                          ce("i", {
-                            className: "",
-                            innerText:"",
-                          }),
-                        ],
-                      }),
+
                     ],
                   }),
                   ce("div", {
