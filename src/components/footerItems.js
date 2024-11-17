@@ -7,7 +7,7 @@ export default function footerItems(item) {
         children:[
            ce("i",{
                className:`${item.icon} text-black w-6 h-6 text-center hover:text-slate-400 `
-           }),
+            }),
             ce("p",{
                 innerText:item.title,
                 className:"text-xs font-semibold leading-3 "
