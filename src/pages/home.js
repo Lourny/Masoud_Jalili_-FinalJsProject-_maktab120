@@ -4,6 +4,7 @@ import fetchAllLogo from "./fetchLogo.js";
 import most from "./homeMostNav.js";
 import fetchAllImageProducts from "./fetchAllImageProducts.js";
 import footer from "./footer.js";
+import fetchAllProducts from "./fetchAllProducts.js";
 
 export default function home(data={}){
     let home=ce("div",{

@@ -19,7 +19,7 @@ import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
 export const router = new Navigo("/");
 
-const changeContents = (page, data) => {
+const changeContents3 = (page, data) => {
   const root = fe("rootsEl");
   root.innerHTML = "";
   if (data){
@@ -27,6 +27,12 @@ const changeContents = (page, data) => {
   }
   root.append(page());
 };
+const changeContents = (page, data) => {
+  const root = fe("rootsEl");
+  root.innerHTML = "";
+  root.append(page(data));
+};
+
 
 const changeContents2 = (page, data) => {
   page(data).then((response) => {
@@ -64,15 +70,17 @@ router
   })
 
   //router home
+
+    .on("/home", () => {
+      changeContents(home);
+    })
   .on("/home/:brand", (params) => {
     changeContents(home, params);
   })
-  .on("/home", () => {
-    changeContents(home);
-  })
+
 
   .on("/test/:brand", (params) => {
-    changeContents2(productFilterByLogo, params);
+    changeContents(productFilterByLogo, params);
   })
 
   .on("filterbytitle/:brand", (params) => {
@@ -80,7 +88,9 @@ router
   })
   .on("/card/:id", (params) => {
     changeContents(fetchCardDetail, params);
-  }).on("/test3",()=>{
+  }).on("/bag",()=>{
   changeContents(payment)
+}).on("/user",()=>{
+  changeContents(login)
 })
 ;

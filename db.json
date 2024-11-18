@@ -1138,5 +1138,51 @@
       "icon": "fa-solid fa-user",
       "iconActive": "fa-solid fa-user"
     }
+  ],
+  "basket": [
+    {
+      "0": {
+        "id": "3",
+        "title": "adidas",
+        "price": 110,
+        "order": 0,
+        "size": [
+          44,
+          43,
+          40
+        ],
+        "color": [
+          "orange",
+          "sky",
+          "green",
+          "indigo"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/3.webp"
+      },
+      "id": "6ecd"
+    },
+    {
+      "0": {
+        "id": "3",
+        "title": "adidas",
+        "price": 110,
+        "order": 0,
+        "size": [
+          44,
+          43,
+          40
+        ],
+        "color": [
+          "orange",
+          "sky",
+          "green",
+          "indigo"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/3.webp"
+      },
+      "id": "eb4f"
+    }
   ]
 }

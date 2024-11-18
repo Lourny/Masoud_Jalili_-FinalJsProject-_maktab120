@@ -1,3 +1,5 @@
+import fetchAllImageProducts from "./fetchAllImageProducts.js";
+
 export default function cardAllElement(data = {}) {
     let cardAllElement = ce("div", {
       className:
