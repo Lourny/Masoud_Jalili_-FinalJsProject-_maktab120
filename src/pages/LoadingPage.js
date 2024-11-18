@@ -5,7 +5,19 @@ import {router} from "../routes/router.js";
 
 export default function loadingPage(){
     setTimeout(()=>{
-        router.navigate("/page2")
+        fetch("http://localhost:5173/userEntry").then(res => {
+            res.json().then(res2=>{
+                res2.forEach(obj=>{
+                    if (obj.entry==0){
+                        router.navigate("/page2")
+                    } else{
+                        router.navigate("/home")
+                    }
+                })
+
+            })
+        });
+
     },3000);
     const loadingPage=ce("div",{
         children:[logo(),spiner()],

@@ -1,5 +1,8 @@
 import {ce} from "../Utils/create-element.js";
-
+import {router} from "../routes/router";
+function toNextPage() {
+    router.navigate("/login")
+}
 export default function onboardingPage5() {
     const login = ce("div", {
         className: "w-full h-full bg-sky-800 flex flex-col justify-end ",
@@ -47,7 +50,10 @@ export default function onboardingPage5() {
                        }),
                     ce("button",{
                         className:"w-full h-12 bg-black text-white text-sm font-medium px-4 py-3 rounded-[30px]",
-                        innerText:"Get Started"
+                        innerText:"Get Started",
+                        events: {
+                            "click": toNextPage
+                        }
                     })
                     ]
                 })
