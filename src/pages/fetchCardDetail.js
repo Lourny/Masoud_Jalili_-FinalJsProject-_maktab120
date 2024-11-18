@@ -14,7 +14,7 @@ function createSize(product) {
     product.size.forEach((sizeNum) => {
         let sizeElem = ce("div", {
             className:
-                "rounded-full w-5 h-5 p-3 border-solid border-[2px] border-slate-400 flex justify-center items-center",
+                "rounded-full w-5 h-5 p-3 border-solid border-[2px] border-slate-400 flex justify-center items-center cursor-pointer",
             children: [
                 ce("p", {
                     innerText: sizeNum,
@@ -34,7 +34,7 @@ function createColor(product) {
     product.color.forEach((colorHash) => {
         let colorHashVar = "bg-" + colorHash + "-500";
         let sizeElem = ce("div", {
-            className: `rounded-full ${colorHashVar} w-5 h-5 p-3 border-solid border-2 border-${colorHashVar}-800 flex justify-center items-center `,
+            className: `rounded-full ${colorHashVar} w-5 h-5 p-3 border-solid border-2 border-${colorHashVar}-800 flex justify-center items-center cursor-pointer `,
             children: [],
         });
         colorContainer.appendChild(sizeElem);
@@ -49,8 +49,6 @@ let endpoint=(e.target.id).toString();
     await fetchCardById(endpoint).then(res=>{
         addData(res);
     })
-
-
 }
 
 export default function fetchCardDetail(data = {}) {
@@ -99,7 +97,7 @@ children: [
                             }),
                             ce("i", {
                                 className:
-                                    "fa-regular fa-heart text-2xl block w-10 h-10  text-center p-2",
+                                    "fa-regular fa-heart text-2xl block w-10 h-10  text-center p-2 cursor-pointer",
                             }),
                         ],
                     }),
@@ -210,14 +208,14 @@ children: [
                                     "w-1/3 rounded-2xl bg-slate-300 flex justify-center items-center px-2 py-[4.5px]",
                                 children: [
                                     ce("i", {
-                                        className: "fa-solid fa-plus text-xs",
+                                        className: "fa-solid fa-plus text-xs cursor-pointer",
                                     }),
                                     ce("div", {
                                         className: "w-2/4 text-center font-bold",
                                         innerText: "3",
                                     }),
                                     ce("i", {
-                                        className: "fa-solid fa-minus text-xs",
+                                        className: "fa-solid fa-minus text-xs cursor-pointer",
                                     }),
                                 ],
                             }),
@@ -253,7 +251,7 @@ children: [
                             }),
                             ce("div", {
                                 className:
-                                    "bg-black w-2/3 h-4/5 rounded-[40px] flex justify-center items-center shadow-md shadow-slate-500/50",
+                                    "bg-black w-2/3 h-4/5 rounded-[40px] flex justify-center items-center shadow-md shadow-slate-500/50 cursor-pointer",
                                 events:{
                                     "click":addToBasket
                                 },

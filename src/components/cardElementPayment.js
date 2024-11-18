@@ -1,5 +1,7 @@
 import { ce } from "../Utils/create-element.js";
 import { router } from "../routes/router.js";
+import fetchFromBasket from "../api/basket.api.js";
+import clog from "../Utils/logdata.js";
 
 function showCardDetail(e) {
   let endpoint = e.target.id.toString();
@@ -7,6 +9,7 @@ function showCardDetail(e) {
 }
 
 export default function cardElementPayment(product) {
+
   let card = ce("div", {
     className:
       " w-96 h-44 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 ",
