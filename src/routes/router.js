@@ -16,13 +16,18 @@ import fe from "../Utils/findElements.js";
 import fetchByTitle from "../pages/fetchByTitle.js";
 import fetchCardByImage from "../api/fetchCardByImage.js";
 import fetchCardDetail from "../pages/fetchCardDetail";
+import payment from "../pages/payment.js";
 export const router = new Navigo("/");
 
 const changeContents = (page, data) => {
   const root = fe("rootsEl");
   root.innerHTML = "";
-  root.append(page(data));
+  if (data){
+    root.append(page(data));
+  }
+  root.append(page());
 };
+
 const changeContents2 = (page, data) => {
   page(data).then((response) => {
     const root = document.getElementById("rootsEl");
@@ -75,4 +80,7 @@ router
   })
   .on("/card/:id", (params) => {
     changeContents(fetchCardDetail, params);
-  });
+  }).on("/test3",()=>{
+  changeContents(payment)
+})
+;
