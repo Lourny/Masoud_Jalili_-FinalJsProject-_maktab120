@@ -1,5 +1,15 @@
 import {ce} from "../Utils/create-element.js";
-
+import clog from "../Utils/logdata.js";
+import fe from "../Utils/findElements.js";
+import {router} from "../routes/router.js";
+function signIn(){
+    let userEmail=fe("userEmail").value;
+    let userPassword=fe("userPassword").value;
+    let data=JSON.parse(localStorage.getItem('user'));
+    if (data.email==userEmail&&data.password==userPassword){
+        router.navigate("/home");
+    }
+}
 export default function login() {
     const login =
         ce("div", {
@@ -28,7 +38,7 @@ export default function login() {
                                        }),
                                        ce("input", {
                                            className: "w-11/12 h-9 py-2.5 placeholder:text-slate-500 focus:border-pink-500 bg-[#FAFAFA]",
-                                           restAttrs: {placeholder: "Email"}
+                                           restAttrs: {placeholder: "Email",id:"userEmail"}
                                        })
                                    ]
                                }),
@@ -39,8 +49,8 @@ export default function login() {
                                            className: " w-1/12 fa-solid fa-lock text-slate-500 flex items-center justify-center pl-3 "
                                        }),
                                        ce("input", {
-                                           className: "w-11/12 h-9 py-2.5 placeholder:text-slate-500 focus:border-pink-500 bg-[#FAFAFA]",
-                                           restAttrs: {placeholder: "Password", type: "password"}
+                                           className: "w-11/12  h-9 py-2.5 placeholder:text-slate-500 focus:border-pink-500 bg-[#FAFAFA]",
+                                           restAttrs: {placeholder: "Password", type: "password",id:"userPassword"}
                                        })
                                    ]
                                }),
@@ -64,11 +74,14 @@ export default function login() {
                    ]
                }),
                 ce("div",{
-                    className:"w-full h-1/6  flex flex-col justify-end items-center px-6 pb-8",
+                    className:"w-full h-1/6  flex flex-col justify-end items-center px-6 pb-8 cursor-pointer",
                     children:[
                         ce("button",{
                             className:"w-full h-12 bg-black text-white text-sm font-medium px-4 py-3 rounded-[30px]",
-                            innerText:"Sign In"
+                            innerText:"Sign In",
+                            events:{
+                                "click":signIn
+                            }
                         })
                     ]
                 })

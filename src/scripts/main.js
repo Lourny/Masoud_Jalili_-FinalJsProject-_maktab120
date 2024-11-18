@@ -21,6 +21,11 @@ const root = fe("app");
 root.className="w-full h-screen";
 root.appendChild(App());
 router.resolve();
+let user={
+    email:"kingmasoud@gmail.com",
+    password:"123456789"
+};
+localStorage.setItem('user',JSON.stringify(user));
 // let welcome = fe("app");
 // welcome.className = "w-full h-dvh";
 // welcome.appendChild(home());
