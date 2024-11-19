@@ -6,7 +6,12 @@ import cardElement from "../components/card.js";
 import {router} from "../routes/router.js";
 import fetchCardById from "../api/fetchCardById.js";
 import addData from "../Utils/addData.js";
-
+// function check(e){
+//     let classEl=e.target.className;
+//     e.target.className=" ";
+//     let lastEl=classEl+"relative  after:top-0 after:left-0 after:bg-[url('./src/assets/image/check-mark.png')] after:bg-cover after:pointer-events-none ";
+//     e.target.className=lastEl;
+// }
 function createSize(product) {
     let sizeContainer = ce("div", {
         className: "w-full flex flex-row justify-center items-center gap-2",
@@ -14,7 +19,7 @@ function createSize(product) {
     product.size.forEach((sizeNum) => {
         let sizeElem = ce("div", {
             className:
-                "rounded-full w-5 h-5 p-3 border-solid border-[2px] border-slate-400 flex justify-center items-center cursor-pointer",
+                "rounded-full w-5 h-5 p-3 border-solid border-[2px] border-slate-400 flex justify-center items-center cursor-pointer hover:bg-slate-400",
             children: [
                 ce("p", {
                     innerText: sizeNum,
@@ -27,16 +32,27 @@ function createSize(product) {
     return sizeContainer;
 }
 
-function createColor(product) {
+function createColor() {
     let colorContainer = ce("div", {
         className: "w-full flex flex-row justify-center items-center gap-2",
-    });
-    product.color.forEach((colorHash) => {
-        let sizeElem = ce("div", {
-            className: `rounded-full bg-${colorHash}-300 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
-            children: [],
-        });
-        colorContainer.appendChild(sizeElem);
+        children:[
+             ce("div", {
+                className: `rounded-full bg-rose-500 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
+                children: []
+            }),
+            ce("div", {
+                className: `rounded-full bg-blue-500 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
+                children: []
+            }),
+            ce("div", {
+                className: `rounded-full bg-indigo-500 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
+                children: []
+            }),
+            ce("div", {
+                className: `rounded-full bg-green-500 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
+                children: []
+            })
+        ]
     });
 
     return colorContainer;
