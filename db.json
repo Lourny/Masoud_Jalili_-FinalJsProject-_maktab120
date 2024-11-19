@@ -1139,52 +1139,7 @@
       "iconActive": "fa-solid fa-user"
     }
   ],
-  "basket": [
-    {
-      "0": {
-        "id": "51",
-        "title": "reebok",
-        "price": 115,
-        "order": 0,
-        "size": [
-          44,
-          42,
-          40
-        ],
-        "color": [
-          "orange",
-          "sky",
-          "green",
-          "indigo"
-        ],
-        "brand": "reebok",
-        "images": "http://localhost:5173/products/reebok/3.webp"
-      },
-      "id": "3d40"
-    },
-    {
-      "0": {
-        "id": "38",
-        "title": "nike",
-        "price": 310,
-        "order": 0,
-        "size": [
-          44,
-          42,
-          40
-        ],
-        "color": [
-          "orange",
-          "sky",
-          "green",
-          "indigo"
-        ],
-        "brand": "nike",
-        "images": "http://localhost:5173/products/nike/6.webp"
-      },
-      "id": "50f4"
-    }
-  ],
+  "basket": [],
   "userEntry": [
     {
       "id": "1",
