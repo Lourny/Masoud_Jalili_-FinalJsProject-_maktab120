@@ -11,7 +11,7 @@ export default function cardElement(product) {
         className: "cardContainer w-44 h-60  flex flex-col justify-center items-start gap-3 ",
         children: [
             ce("div", {
-                className: "imageContainer w-full h-44 rounded-3xl p-5 bg-[#ECEFF1] flex justify-center items-center",
+                className: "imageContainer w-full h-44 rounded-3xl p-5 bg-[#ECEFF1] flex justify-center items-center cursor-pointer hover:bg-slate-200",
                 children: [ce("img", {
                     restAttrs: {src: product.images,
                     id:product.id

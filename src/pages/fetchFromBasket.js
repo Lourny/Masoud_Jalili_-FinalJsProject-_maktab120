@@ -12,7 +12,7 @@ export default function fetchCardFromBasket() {
     fetchFromBasket().then(products=>{
         products.forEach(productss=>{
             let product=productss['0'];
-            let basketCard=cardElementPayment(product);
+            let basketCard=cardElementPayment(product,productss);
             basketCardsContainer.appendChild(basketCard);
         })
     })

@@ -32,9 +32,8 @@ function createColor(product) {
         className: "w-full flex flex-row justify-center items-center gap-2",
     });
     product.color.forEach((colorHash) => {
-        let colorHashVar = "bg-" + colorHash + "-500";
         let sizeElem = ce("div", {
-            className: `rounded-full ${colorHashVar} w-5 h-5 p-3 border-solid border-2 border-${colorHashVar}-800 flex justify-center items-center cursor-pointer `,
+            className: `rounded-full bg-${colorHash}-300 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
             children: [],
         });
         colorContainer.appendChild(sizeElem);
@@ -48,6 +47,7 @@ async function  addToBasket(e) {
 let endpoint=(e.target.id).toString();
     await fetchCardById(endpoint).then(res=>{
         addData(res);
+        alert("your product add to card successfully")
     })
 }
 
@@ -95,9 +95,12 @@ children: [
                                 innerText: product.title,
                                 className: "font-bold text-4xl w-full  ",
                             }),
-                            ce("i", {
-                                className:
-                                    "fa-regular fa-heart text-2xl block w-10 h-10  text-center p-2 cursor-pointer",
+                            ce("a",{
+                                className:"hover:text-pink-600 active:text-pink-600",
+                                children:[ce("i", {
+                                    className:
+                                        "fa-regular fa-heart text-2xl block w-10 h-10  text-center p-2 cursor-pointer "
+                                })]
                             }),
                         ],
                     }),
@@ -184,7 +187,7 @@ children: [
                                                 className: "font-bold",
                                                 innerText: "Color",
                                             }),
-                                            ce("ul", {
+                                            ce("div", {
                                                 className: "",
                                                 innerText: "",
                                                 children: [createColor(product)],
