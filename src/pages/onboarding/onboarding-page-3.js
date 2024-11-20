@@ -1,5 +1,5 @@
-import {ce} from "../Utils/create-element.js";
-import {router} from "../routes/router";
+import {ce} from "../../Utils/create-element.js";
+import {router} from "../../routes/router.js";
 
 function toNextPage() {
     router.navigate("/page4")

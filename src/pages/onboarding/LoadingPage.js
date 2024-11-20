@@ -1,7 +1,7 @@
-import {ce} from "../Utils/create-element.js";
-import logo from "../components/logo.js";
-import spiner from "../components/loading.js";
-import {router} from "../routes/router.js";
+import {ce} from "../../Utils/create-element.js";
+import logo from "../../components/logo.js";
+import spiner from "../../components/loading.js";
+import {router} from "../../routes/router.js";
 
 export default function loadingPage(){
     setTimeout(()=>{

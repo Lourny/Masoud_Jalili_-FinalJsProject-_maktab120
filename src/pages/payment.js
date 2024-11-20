@@ -16,17 +16,15 @@ export default function payment() {
     className:
       "paymentContainer w-full h-screen px-6 flex flex-col justify-between items-center  relative",
     children: [
-        //searchBox
-      searchItem(),
-        //fetch cards from basket
+      //searchBox
+      searchItem("My Cart"),
+      //fetch cards from basket
       fetchCardFromBasket(),
-        //footer and total price
-        ce("div",{
-          className:"w-full h-2/8",
-          children:[
-            paymentCart() , footerCart()
-          ]
-        })
+      //footer and total price
+      ce("div", {
+        className: "w-full h-2/8",
+        children: [paymentCart(), footerCart()],
+      }),
     ],
   });
   return payment;

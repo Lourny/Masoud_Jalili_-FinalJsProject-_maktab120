@@ -1139,7 +1139,74 @@
       "iconActive": "fa-solid fa-user"
     }
   ],
-  "basket": [],
+  "basket": [
+    {
+      "0": {
+        "id": "5",
+        "title": "adidas",
+        "price": 75,
+        "order": 0,
+        "size": [
+          44,
+          42,
+          40
+        ],
+        "color": [
+          "orange",
+          "sky",
+          "green",
+          "indigo"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/5.webp"
+      },
+      "id": "47a5"
+    },
+    {
+      "0": {
+        "id": "6",
+        "title": "adidas",
+        "price": 45,
+        "order": 0,
+        "size": [
+          44,
+          42,
+          40
+        ],
+        "color": [
+          "orange",
+          "sky",
+          "green",
+          "indigo"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/6.webp"
+      },
+      "id": "bbb6"
+    },
+    {
+      "0": {
+        "id": "38",
+        "title": "nike",
+        "price": 310,
+        "order": 0,
+        "size": [
+          44,
+          42,
+          40
+        ],
+        "color": [
+          "orange",
+          "sky",
+          "green",
+          "indigo"
+        ],
+        "brand": "nike",
+        "images": "http://localhost:5173/products/nike/6.webp"
+      },
+      "id": "9eeb"
+    }
+  ],
   "userEntry": [
     {
       "id": "1",

@@ -1,11 +1,11 @@
 import Navigo from "navigo";
 
 //import onboarding
-import loadingPage from "../pages/LoadingPage.js";
-import onboardingPage2 from "../pages/onboarding-page-2.js";
-import onboardingPage3 from "../pages/onboarding-page-3.js";
-import onboardingPage4 from "../pages/onboarding-page-4.js";
-import onboardingPage5 from "../pages/onboarding-page-5.js";
+import loadingPage from "../pages/onboarding/LoadingPage.js";
+import onboardingPage2 from "../pages/onboarding/onboarding-page-2.js";
+import onboardingPage3 from "../pages/onboarding/onboarding-page-3.js";
+import onboardingPage4 from "../pages/onboarding/onboarding-page-4.js";
+import onboardingPage5 from "../pages/onboarding/onboarding-page-5.js";
 import productFilterByLogo from "../pages/filterByLogoProducts.js";
 //import loading
 import login from "../pages/login.js";
@@ -17,12 +17,13 @@ import fetchByTitle from "../pages/fetchByTitle.js";
 import fetchCardByImage from "../api/fetchCardByImage.js";
 import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
+import ordersPage from "../pages/Orders/orders-page.js";
 export const router = new Navigo("/");
 
 const changeContents3 = (page, data) => {
   const root = fe("rootsEl");
   root.innerHTML = "";
-  if (data){
+  if (data) {
     root.append(page(data));
   }
   root.append(page());
@@ -32,7 +33,6 @@ const changeContents = (page, data) => {
   root.innerHTML = "";
   root.append(page(data));
 };
-
 
 const changeContents2 = (page, data) => {
   page(data).then((response) => {
@@ -71,13 +71,12 @@ router
 
   //router home
 
-    .on("/home", () => {
-      changeContents(home);
-    })
+  .on("/home", () => {
+    changeContents(home);
+  })
   .on("/home/:brand", (params) => {
     changeContents(home, params);
   })
-
 
   .on("/test/:brand", (params) => {
     changeContents(productFilterByLogo, params);
@@ -88,9 +87,13 @@ router
   })
   .on("/card/:id", (params) => {
     changeContents(fetchCardDetail, params);
-  }).on("/bag",()=>{
-  changeContents(payment)
-}).on("/user",()=>{
-  changeContents(login)
-})
-;
+  })
+  .on("/bag", () => {
+    changeContents(payment);
+  })
+  .on("/user", () => {
+    changeContents(login);
+  })
+  .on("/cart", () => {
+    changeContents(ordersPage);
+  });

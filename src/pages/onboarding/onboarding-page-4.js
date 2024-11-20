@@ -1,13 +1,13 @@
-import {ce} from "../Utils/create-element.js";
-import {router} from "../routes/router";
+import {ce} from "../../Utils/create-element.js";
+import {router} from "../../routes/router.js";
 function toNextPage() {
-    router.navigate("/login")
+    router.navigate("/page5")
 }
-export default function onboardingPage5() {
+export default function onboardingPage4() {
     const login = ce("div", {
         className: "w-full h-full bg-sky-800 flex flex-col justify-end ",
         children: [ce("div",{
-            className:"h-2/3 w-full relative after:absolute after:z-10 after:inset-0 after:bg-[url('./src/assets/image/onboarding-page-4.jpeg')]  after:bg-cover after:left-[-2px] after:top-[-42px]  after:pointer-events-none"
+            className:"h-2/3 w-full relative after:absolute after:z-10 after:inset-0 after:bg-[url('./src/assets/image/onboarding-page-3.jpeg')]  after:bg-cover after:top-[-41px]  after:pointer-events-none"
         })
             ,
             ce("div",
@@ -16,20 +16,12 @@ export default function onboardingPage5() {
                     children: [ce("h1",
                         {
                             className: "text-center w-full text-[32px] font-bold pb-4",
-                            innerText: "Let’s fulfill your fashion needs with shoearight now!"
+                            innerText: "Your satisfaction is our number one periority"
                         }
                     ),
                        ce("div",{
-                           className:"w-full flex flex-row items-center justify-center gap-1.5 ",
+                           className:"w-full flex flex-row items-center justify-center gap-1.5",
                            children:[
-                               ce("div", {
-                                   className: "navigation w-[30px] h-[23px] py-2.5",
-                                   children: [
-                                       ce("div", {
-                                           className: " bg-black opacity-50 py-0.5"
-                                       })
-                                   ]
-                               }),
                                ce("div", {
                                    className: "navigation w-[30px] h-[23px] py-2.5",
                                    children: [
@@ -45,12 +37,20 @@ export default function onboardingPage5() {
                                            className: " bg-black  py-0.5"
                                        })
                                    ]
+                               }),
+                               ce("div", {
+                                   className: "navigation w-[30px] h-[23px] py-2.5",
+                                   children: [
+                                       ce("div", {
+                                           className: " bg-black opacity-50 py-0.5"
+                                       })
+                                   ]
                                })
                            ]
                        }),
                     ce("button",{
                         className:"w-full h-12 bg-black text-white text-sm font-medium px-4 py-3 rounded-[30px]",
-                        innerText:"Get Started",
+                        innerText:"Next",
                         events: {
                             "click": toNextPage
                         }

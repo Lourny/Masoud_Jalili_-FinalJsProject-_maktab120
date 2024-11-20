@@ -33,6 +33,7 @@ function createSize(product) {
 }
 
 function createColor() {
+
     let colorContainer = ce("div", {
         className: "w-full flex flex-row justify-center items-center gap-2",
         children:[
