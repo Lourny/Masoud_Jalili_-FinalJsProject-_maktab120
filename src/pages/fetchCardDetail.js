@@ -45,24 +45,35 @@ function createSize(product) {
 
 function createColor() {
 
+    function selectedSize(e){
+        let targetClassName=e.target.className.split("bg")[1];
+        let orderedColor=targetClassName.split("-")[1];
+        localStorage.setItem("orderedColor",JSON.stringify(orderedColor));
+
+    }
+
     let colorContainer = ce("div", {
         className: "w-full flex flex-row justify-center items-center gap-2",
         children:[
              ce("div", {
                 className: `rounded-full bg-rose-500 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
-                children: []
+                children: [],
+                 events:{"click":selectedSize}
             }),
             ce("div", {
                 className: `rounded-full bg-blue-500 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
-                children: []
+                children: [],
+                events:{"click":selectedSize}
             }),
             ce("div", {
                 className: `rounded-full bg-indigo-500 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
-                children: []
+                children: [],
+                events:{"click":selectedSize}
             }),
             ce("div", {
                 className: `rounded-full bg-green-500 w-5 h-5 p-3 border-solid border-2  flex justify-center items-center cursor-pointer hover:bg-slate-400`,
-                children: []
+                children: [],
+                events:{"click":selectedSize}
             })
         ]
     });
@@ -75,8 +86,10 @@ async function  addToBasket(e) {
 let endpoint=(e.target.id).toString();
     await fetchCardById(endpoint).then(res=>{
         let  orderedSize= Number(JSON.parse(localStorage.getItem("orderedSize")));
+        let  orderedColor= String(JSON.parse(localStorage.getItem("orderedColor")));
         let ress=res[0];
         ress.size=[orderedSize];
+        ress.color=[orderedColor];
         let ressArr=[ress];
         addData(ressArr);
         alert("your product add to card successfully")

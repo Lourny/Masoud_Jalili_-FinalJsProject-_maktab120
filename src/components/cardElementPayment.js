@@ -64,7 +64,7 @@ export default function cardElementPayment(product,productss) {
                     children: ["color"],
                   }),
                   ce("p", {
-                    innerText: "name color",
+                    innerText: `${product.color}`,
                   }),
                 ],
               }),
