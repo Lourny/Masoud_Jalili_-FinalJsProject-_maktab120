@@ -15,7 +15,6 @@ function deleteCard(e){
 }
 
 export default function cardElementPayment(product,productss) {
-
   let card = ce("div", {
     className:
       " w-full h-44 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 ",
@@ -72,7 +71,7 @@ export default function cardElementPayment(product,productss) {
               ce("div", {
                 children: [
                     ce("h5",{
-                        innerText: `Size=${"number"}`
+                        innerText: `Size=${product.size}`
                     })
                 ],
               }),

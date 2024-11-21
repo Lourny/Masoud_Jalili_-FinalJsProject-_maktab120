@@ -1142,13 +1142,33 @@
   "basket": [
     {
       "0": {
-        "id": "5",
+        "id": "1",
         "title": "adidas",
-        "price": 75,
+        "price": 245,
         "order": 0,
         "size": [
-          44,
           42,
+          41,
+          40
+        ],
+        "color": [
+          "orange",
+          "sky",
+          "yellow",
+          "indigo"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/1.webp"
+      },
+      "id": "27ea"
+    },
+    {
+      "0": {
+        "id": "2",
+        "title": "adidas",
+        "price": 145,
+        "order": 0,
+        "size": [
           40
         ],
         "color": [
@@ -1158,20 +1178,38 @@
           "indigo"
         ],
         "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/5.webp"
+        "images": "http://localhost:5173/products/adidas/2.webp"
       },
-      "id": "47a5"
+      "id": "29f0"
     },
     {
       "0": {
-        "id": "6",
-        "title": "adidas",
-        "price": 45,
+        "id": "53",
+        "title": "reebok",
+        "price": 360,
         "order": 0,
         "size": [
-          44,
-          42,
-          40
+          44
+        ],
+        "color": [
+          "orange",
+          "sky",
+          "green",
+          "indigo"
+        ],
+        "brand": "reebok",
+        "images": "http://localhost:5173/products/reebok/5.webp"
+      },
+      "id": "f3fd"
+    },
+    {
+      "0": {
+        "id": "3",
+        "title": "adidas",
+        "price": 110,
+        "order": 0,
+        "size": [
+          44
         ],
         "color": [
           "orange",
@@ -1180,31 +1218,9 @@
           "indigo"
         ],
         "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/6.webp"
+        "images": "http://localhost:5173/products/adidas/3.webp"
       },
-      "id": "bbb6"
-    },
-    {
-      "0": {
-        "id": "38",
-        "title": "nike",
-        "price": 310,
-        "order": 0,
-        "size": [
-          44,
-          42,
-          40
-        ],
-        "color": [
-          "orange",
-          "sky",
-          "green",
-          "indigo"
-        ],
-        "brand": "nike",
-        "images": "http://localhost:5173/products/nike/6.webp"
-      },
-      "id": "9eeb"
+      "id": "de67"
     }
   ],
   "userEntry": [

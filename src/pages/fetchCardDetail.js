@@ -13,6 +13,13 @@ import addData from "../Utils/addData.js";
 //     e.target.className=lastEl;
 // }
 function createSize(product) {
+
+    function setSizeToLocalStorage(e){
+        let clickedSize=e.target.innerText;
+        localStorage.setItem("orderedSize",JSON.stringify(clickedSize));
+    }
+
+
     let sizeContainer = ce("div", {
         className: "w-full flex flex-row justify-center items-center gap-2",
     });
@@ -26,9 +33,13 @@ function createSize(product) {
                     className: "text-xs font-bold text-slate-500",
                 }),
             ],
+            events:{
+                "click":setSizeToLocalStorage
+            }
         });
         sizeContainer.appendChild(sizeElem);
     });
+
     return sizeContainer;
 }
 
@@ -63,7 +74,11 @@ async function  addToBasket(e) {
     e.stopPropagation();
 let endpoint=(e.target.id).toString();
     await fetchCardById(endpoint).then(res=>{
-        addData(res);
+        let  orderedSize= Number(JSON.parse(localStorage.getItem("orderedSize")));
+        let ress=res[0];
+        ress.size=[orderedSize];
+        let ressArr=[ress];
+        addData(ressArr);
         alert("your product add to card successfully")
     })
 }
