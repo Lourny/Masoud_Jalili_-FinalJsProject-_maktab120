@@ -18,6 +18,7 @@ import fetchCardByImage from "../api/fetchCardByImage.js";
 import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
+import fetchCardFromBasket from "../pages/fetchFromBasket.js";
 export const router = new Navigo("/");
 
 const changeContents3 = (page, data) => {

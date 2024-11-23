@@ -4,17 +4,61 @@ import fetchFromBasket from "../api/basket.api.js";
 import clog from "../Utils/logdata.js";
 import deleteData from "../Utils/deleteData.js";
 
+//function for showing card detail
+
 function showCardDetail(e, products) {
   let endpoint = e.target.id.toString();
   router.navigate(`card/${endpoint}`);
 }
+//function for delete the card from db and dont shown in this page
+
+// function deleteCard(e) {
+//   let endpoint = e.target.id.toString();
+//   fetchFromBasket(endpoint).then((products) => {
+//     let product = products["0"];
+//     clog(product);
+//   });
+
+//   // deleteData(endpoint);
+//   // location.reload();
+// }
 function deleteCard(e) {
-  let endpoint = e.target.id.toString();
-  deleteData(endpoint);
-  location.reload();
+  const endpoint = e.target.id.toString();
+
+  // نمایش دیالوگ تأیید
+  const confirmationDialog = document.createElement("div");
+  confirmationDialog.innerHTML = `
+    <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+      <div class="bg-white rounded-lg p-6 w-80">
+        <h2 class="text-lg font-bold mb-4">Remove from Cart?</h2>
+        <p class="mb-4">Are you sure you want to remove this item?</p>
+        <div class="flex justify-end gap-4">
+          <button id="cancel-btn" class="bg-gray-300 px-4 py-2 rounded-md">Cancel</button>
+          <button id="confirm-btn" class="bg-red-500 text-white px-4 py-2 rounded-md">Yes, Remove</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(confirmationDialog);
+
+  // مدیریت دکمه‌ها
+  document.getElementById("cancel-btn").addEventListener("click", () => {
+    confirmationDialog.remove(); // حذف دیالوگ در صورت کلیک روی Cancel
+  });
+
+  document.getElementById("confirm-btn").addEventListener("click", () => {
+    // اگر کاربر تایید کرد، حذف داده
+    fetchFromBasket(endpoint).then((products) => {
+      let product = products["0"];
+      clog(product);
+    });
+
+    deleteData(endpoint); // فراخوانی تابع حذف
+    location.reload(); // رفرش صفحه
+  });
 }
 
-//function for shown selected color
+//function for shown selected color----------------------------
 
 function returnColor(product) {
   let color = "";
