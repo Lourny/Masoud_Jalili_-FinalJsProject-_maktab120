@@ -1156,6 +1156,23 @@
         "images": "http://localhost:5173/products/newbalance/8.webp"
       },
       "id": "3bc7"
+    },
+    {
+      "0": {
+        "id": "2",
+        "title": "adidas",
+        "price": 145,
+        "order": 0,
+        "size": [
+          44
+        ],
+        "color": [
+          "green"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/2.webp"
+      },
+      "id": "ef30"
     }
   ],
   "userEntry": [

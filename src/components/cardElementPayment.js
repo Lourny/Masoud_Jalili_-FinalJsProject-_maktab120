@@ -33,10 +33,11 @@ function deleteCard(e) {
       children: [
         ce("div", {
           className:
-            "fixed inset-0 bg-gray-800 bg-opacity-50 felx justify-center items-center",
+            "fixed  inset-0 bg-slate-800 bg-opacity-50 felx flex-col  justify-center items-center",
           children: [
             ce("div", {
-              className: "bg-white rounded-xl p-6 w-100",
+              className:
+                "bg-white rounded-tl-[60px] rounded-tr-[60px] p-6 w-100 h-[45%] absolute inset-x-0 bottom-0 flex flex-col justify-around items-center ",
               children: [
                 ce("h1", {
                   className: "text-2xl font-bold mb-4",
@@ -44,17 +45,19 @@ function deleteCard(e) {
                 }),
                 confirmationDeleteCard(product, products),
                 ce("div", {
-                  className: "flex justify-end gap-4",
+                  className: "flex  w-full  justify-center gap-3",
                   children: [
                     ce("button", {
-                      className: "bg-gary-300 px-4 py-2 rounded-md",
+                      className:
+                        "bg-slate-300 px-4 py-3  w-[45%] rounded-full font-bold",
                       innerText: "Cancel",
                       restAttrs: {
                         id: "cancel-btn",
                       },
                     }),
                     ce("button", {
-                      className: "bg-red-500 text-white px-4 py-2 rounded-md",
+                      className:
+                        "bg-black text-white px-4 py-3 rounded-full w-[45%]  font-bold",
                       innerText: "Yes, Remove",
                       restAttrs: {
                         id: "confirm-btn",
