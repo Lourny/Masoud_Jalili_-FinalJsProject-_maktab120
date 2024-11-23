@@ -110,6 +110,23 @@ function returnColor(product) {
   return color;
 }
 
+function kamCounter(e) {
+  let counter = fe("counterDisplay");
+  let counterAmount = Number(counter.innerHTML);
+  counterAmount--;
+  if (counterAmount <= 0) {
+    counterAmount = 0;
+  }
+  counter.innerHTML = counterAmount;
+}
+
+function ziadCounter(e) {
+  let counter = fe("counterDisplay");
+  let counterAmount = Number(counter.innerHTML);
+  counterAmount++;
+  counter.innerHTML = counterAmount;
+}
+
 export default function cardElementPayment(product, productss) {
   let card = ce("div", {
     className:
@@ -198,13 +215,22 @@ export default function cardElementPayment(product, productss) {
                 children: [
                   ce("i", {
                     className: "fa-solid fa-minus text-xs",
+                    events: {
+                      click: kamCounter,
+                    },
                   }),
                   ce("div", {
                     className: "w-2/4 text-center font-bold",
                     innerText: "3",
+                    restAttrs: {
+                      id: "counterDisplay",
+                    },
                   }),
                   ce("i", {
                     className: "fa-solid fa-plus text-xs",
+                    events: {
+                      click: ziadCounter,
+                    },
                   }),
                 ],
               }),
