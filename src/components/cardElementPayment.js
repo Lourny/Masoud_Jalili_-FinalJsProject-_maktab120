@@ -19,20 +19,17 @@ function deleteCard(e) {
 function returnColor(product) {
   let color = "";
   product.color.forEach((element) => {
-    if (element == "orange") {
-      color =
-        "flex flex-row justify-center items-center pb-3 h-1/4 bg-orane-400";
+    if (element == "green") {
+      color = "w-5 h-5 rounded-full bg-green-400";
     }
     if (element == "rose") {
-      color =
-        "flex flex-row justify-center items-center pb-3 h-1/4 bg-rose-400";
+      color = "w-5 h-5 rounded-full bg-rose-400";
     }
     if (element == "sky") {
-      color = "flex flex-row justify-center items-center pb-3 h-1/4 bg-sky-400";
+      color = "w-5 h-5 rounded-full bg-sky-400";
     }
     if (element == "indigo") {
-      color =
-        "flex flex-row justify-center items-center pb-3 h-1/4 bg-indigo-400";
+      color = "w-5 h-5 rounded-full bg-indigo-400";
     }
   });
 
@@ -81,27 +78,31 @@ export default function cardElementPayment(product, productss) {
 
           ce("div", {
             className:
-              "flex flex-row justify-between items-center w-full bg-green-500",
+              "flex flex-row justify-start items-center w-full  gap-2  py-2 mt-2",
             children: [
               ce("div", {
-                className: returnColor,
+                className:
+                  "  relative after:absolute  after:w-full after:h-full  after:top-0 after:left-1.5 after:border-r-2 after:border-r-solid after:border-r-slate-400 after:pointer-events-none",
                 children: [
                   ce("ul", {
-                    children: ["color"],
+                    className: " flex justify-start items-center gap-1",
+                    children: [
+                      ce("div", {
+                        className: returnColor(product),
+                      }),
+                      ce("h1", {
+                        className: "font-bold text-slate-700 text-sm",
+                        innerText: product.color,
+                      }),
+                    ],
                   }),
-                  ce(
-                    "p",
-
-                    {
-                      className: returnColor(product),
-                      innerText: `${product.color}`,
-                    }
-                  ),
                 ],
               }),
               ce("div", {
+                className: "pl-1",
                 children: [
                   ce("h5", {
+                    className: "font-bold text-slate-700 text-sm",
                     innerText: `Size=${product.size}`,
                   }),
                 ],
