@@ -4,17 +4,40 @@ import fetchFromBasket from "../api/basket.api.js";
 import clog from "../Utils/logdata.js";
 import deleteData from "../Utils/deleteData.js";
 
-function showCardDetail(e,products) {
+function showCardDetail(e, products) {
   let endpoint = e.target.id.toString();
   router.navigate(`card/${endpoint}`);
 }
-function deleteCard(e){
-  let endpoint=(e.target.id).toString();
+function deleteCard(e) {
+  let endpoint = e.target.id.toString();
   deleteData(endpoint);
   location.reload();
 }
 
-export default function cardElementPayment(product,productss) {
+function returnColor(product) {
+  let color = "";
+  product.color.forEach((element) => {
+    if (element == "orange") {
+      color =
+        "flex flex-row justify-center items-center pb-3 h-1/4 bg-orane-400";
+    }
+    if (element == "yellow") {
+      color =
+        "flex flex-row justify-center items-center pb-3 h-1/4 bg-yellow-400";
+    }
+    if (element == "sky") {
+      color = "flex flex-row justify-center items-center pb-3 h-1/4 bg-sky-400";
+    }
+    if (element == "indigo") {
+      color =
+        "flex flex-row justify-center items-center pb-3 h-1/4 bg-indigo-400";
+    }
+  });
+
+  return color;
+}
+
+export default function cardElementPayment(product, productss) {
   let card = ce("div", {
     className:
       " w-full h-44 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 ",
@@ -44,9 +67,10 @@ export default function cardElementPayment(product,productss) {
                 innerText: product.title,
               }),
               ce("i", {
-                className: "fa-solid fa-trash text-xl cursor-pointer hover:text-red-600",
-                restAttrs:{id:productss.id
-                }  ,  events: {
+                className:
+                  "fa-solid fa-trash text-xl cursor-pointer hover:text-red-600",
+                restAttrs: { id: productss.id },
+                events: {
                   click: deleteCard,
                 },
               }),
@@ -54,25 +78,30 @@ export default function cardElementPayment(product,productss) {
           }),
 
           ce("div", {
-            className: "flex flex-row justify-between items-center w-full",
+            className:
+              "flex flex-row justify-between items-center w-full bg-green-500",
             children: [
               ce("div", {
-                className:
-                  "flex flex-row justify-center items-center pb-3 h-1/4 relative after:absolute py-3 ml-3 after:w-full after:h-6 after:left-0 after:border-r-2 after:border-b-solid after:border-r-slate-100 ",
+                className: returnColor,
                 children: [
                   ce("ul", {
                     children: ["color"],
                   }),
-                  ce("p", {
-                    innerText: `${product.color}`,
-                  }),
+                  ce(
+                    "p",
+
+                    {
+                      className: returnColor(product),
+                      innerText: `${product.color}`,
+                    }
+                  ),
                 ],
               }),
               ce("div", {
                 children: [
-                    ce("h5",{
-                        innerText: `Size=${product.size}`
-                    })
+                  ce("h5", {
+                    innerText: `Size=${product.size}`,
+                  }),
                 ],
               }),
             ],

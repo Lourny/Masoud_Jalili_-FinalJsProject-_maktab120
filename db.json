@@ -1147,66 +1147,15 @@
         "price": 145,
         "order": 0,
         "size": [
-          40
+          42
         ],
         "color": [
-          null
+          "indigo"
         ],
         "brand": "adidas",
         "images": "http://localhost:5173/products/adidas/2.webp"
       },
-      "id": "c321"
-    },
-    {
-      "0": {
-        "id": "5",
-        "title": "adidas",
-        "price": 75,
-        "order": 0,
-        "size": [
-          44
-        ],
-        "color": [
-          null
-        ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/5.webp"
-      },
-      "id": "603a"
-    },
-    {
-      "0": {
-        "id": "2",
-        "title": "adidas",
-        "price": 145,
-        "order": 0,
-        "size": [
-          44
-        ],
-        "color": [
-          null
-        ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/2.webp"
-      },
-      "id": "a634"
-    },
-    {
-      "0": {
-        "id": "2",
-        "title": "adidas",
-        "price": 145,
-        "order": 0,
-        "size": [
-          44
-        ],
-        "color": [
-          "rose"
-        ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/2.webp"
-      },
-      "id": "c2d5"
+      "id": "0446"
     },
     {
       "0": {
@@ -1215,7 +1164,7 @@
         "price": 98,
         "order": 0,
         "size": [
-          42
+          40
         ],
         "color": [
           "blue"
@@ -1223,7 +1172,41 @@
         "brand": "adidas",
         "images": "http://localhost:5173/products/adidas/8.webp"
       },
-      "id": "ae2f"
+      "id": "1c7e"
+    },
+    {
+      "0": {
+        "id": "10",
+        "title": "asics",
+        "price": 142,
+        "order": 0,
+        "size": [
+          44
+        ],
+        "color": [
+          "indigo"
+        ],
+        "brand": "asics",
+        "images": "http://localhost:5173/products/asics/2.webp"
+      },
+      "id": "06ee"
+    },
+    {
+      "0": {
+        "id": "8",
+        "title": "adidas",
+        "price": 98,
+        "order": 0,
+        "size": [
+          44
+        ],
+        "color": [
+          "blue"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/8.webp"
+      },
+      "id": "c563"
     }
   ],
   "userEntry": [
