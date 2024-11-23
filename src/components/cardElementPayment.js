@@ -24,110 +24,112 @@ function showCardDetail(e, products) {
 //   // deleteData(endpoint);
 //   // location.reload();
 // }
-function deleteCard(e) {
-  const endpoint = e.target.id.toString();
-  fetchFromBasket(endpoint).then((products) => {
-    let product = products["0"];
-    //for confarmation dialog------------------------
-    let confirmationDialog = ce("div", {
-      children: [
-        ce("div", {
-          className:
-            "fixed  inset-0 bg-slate-800 bg-opacity-50 felx flex-col  justify-center items-center",
-          children: [
-            ce("div", {
-              className:
-                "bg-white rounded-tl-[60px] rounded-tr-[60px] p-6 w-100 h-[45%] absolute inset-x-0 bottom-0 flex flex-col justify-around items-center ",
-              children: [
-                ce("h1", {
-                  className: "text-2xl font-bold mb-4",
-                  innerText: "Remove from Cart?",
-                }),
-                confirmationDeleteCard(product, products),
-                ce("div", {
-                  className: "flex  w-full  justify-center gap-3",
-                  children: [
-                    ce("button", {
-                      className:
-                        "bg-slate-300 px-4 py-3  w-[45%] rounded-full font-bold",
-                      innerText: "Cancel",
-                      restAttrs: {
-                        id: "cancel-btn",
-                      },
-                    }),
-                    ce("button", {
-                      className:
-                        "bg-black text-white px-4 py-3 rounded-full w-[45%]  font-bold",
-                      innerText: "Yes, Remove",
-                      restAttrs: {
-                        id: "confirm-btn",
-                      },
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          ],
-        }),
-      ],
-    });
-    //for showing confarmation----------------------------
-    document.body.appendChild(confirmationDialog);
-
-    // مدیریت دکمه‌ها
-    fe("cancel-btn").addEventListener("click", () => {
-      confirmationDialog.remove(); // حذف دیالوگ در صورت کلیک روی Cancel
-    });
-
-    fe("confirm-btn").addEventListener("click", () => {
-      // اگر کاربر تایید کرد، حذف داده
-
-      deleteData(endpoint); // فراخوانی تابع حذف
-      location.reload(); // رفرش صفحه
-    });
-  });
-}
-
-//function for shown selected color----------------------------
-
-function returnColor(product) {
-  let color = "";
-  product.color.forEach((element) => {
-    if (element == "green") {
-      color = "w-5 h-5 rounded-full bg-green-400";
-    }
-    if (element == "rose") {
-      color = "w-5 h-5 rounded-full bg-rose-400";
-    }
-    if (element == "sky") {
-      color = "w-5 h-5 rounded-full bg-sky-400";
-    }
-    if (element == "indigo") {
-      color = "w-5 h-5 rounded-full bg-indigo-400";
-    }
-  });
-
-  return color;
-}
-
-function kamCounter(e) {
-  let counter = fe("counterDisplay");
-  let counterAmount = Number(counter.innerHTML);
-  counterAmount--;
-  if (counterAmount <= 0) {
-    counterAmount = 0;
-  }
-  counter.innerHTML = counterAmount;
-}
-
-function ziadCounter(e) {
-  let counter = fe("counterDisplay");
-  let counterAmount = Number(counter.innerHTML);
-  counterAmount++;
-  counter.innerHTML = counterAmount;
-}
 
 export default function cardElementPayment(product, productss) {
+  function deleteCard(e) {
+    const endpoint = e.target.id.toString();
+    fetchFromBasket(endpoint).then((products) => {
+      let product = products["0"];
+      //for confarmation dialog------------------------
+      let confirmationDialog = ce("div", {
+        children: [
+          ce("div", {
+            className:
+              "fixed  inset-0 bg-slate-800 bg-opacity-50 felx flex-col  justify-center items-center",
+            children: [
+              ce("div", {
+                className:
+                  "bg-white rounded-tl-[60px] rounded-tr-[60px] p-6 w-100 h-[45%] absolute inset-x-0 bottom-0 flex flex-col justify-around items-center ",
+                children: [
+                  ce("h1", {
+                    className: "text-2xl font-bold mb-4",
+                    innerText: "Remove from Cart?",
+                  }),
+                  confirmationDeleteCard(product, products),
+                  ce("div", {
+                    className: "flex  w-full  justify-center gap-3",
+                    children: [
+                      ce("button", {
+                        className:
+                          "bg-slate-300 px-4 py-3  w-[45%] rounded-full font-bold",
+                        innerText: "Cancel",
+                        restAttrs: {
+                          id: "cancel-btn",
+                        },
+                      }),
+                      ce("button", {
+                        className:
+                          "bg-black text-white px-4 py-3 rounded-full w-[45%]  font-bold",
+                        innerText: "Yes, Remove",
+                        restAttrs: {
+                          id: "confirm-btn",
+                        },
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      });
+      //for showing confarmation----------------------------
+      document.body.appendChild(confirmationDialog);
+
+      // مدیریت دکمه‌ها
+      fe("cancel-btn").addEventListener("click", () => {
+        confirmationDialog.remove(); // حذف دیالوگ در صورت کلیک روی Cancel
+      });
+
+      fe("confirm-btn").addEventListener("click", () => {
+        // اگر کاربر تایید کرد، حذف داده
+
+        deleteData(endpoint); // فراخوانی تابع حذف
+        location.reload(); // رفرش صفحه
+      });
+    });
+  }
+
+  //function for shown selected color----------------------------
+
+  function returnColor(product) {
+    let color = "";
+    product.color.forEach((element) => {
+      if (element == "green") {
+        color = "w-5 h-5 rounded-full bg-green-400";
+      }
+      if (element == "rose") {
+        color = "w-5 h-5 rounded-full bg-rose-400";
+      }
+      if (element == "sky") {
+        color = "w-5 h-5 rounded-full bg-sky-400";
+      }
+      if (element == "indigo") {
+        color = "w-5 h-5 rounded-full bg-indigo-400";
+      }
+    });
+
+    return color;
+  }
+
+  function kamCounter(e) {
+    let counter = fe(`counterDisplay${productss["id"]}`);
+    let counterAmount = Number(counter.innerHTML);
+    counterAmount--;
+    if (counterAmount <= 1) {
+      counterAmount = 1;
+    }
+    counter.innerHTML = counterAmount;
+  }
+
+  function ziadCounter() {
+    let counter = fe(`counterDisplay${productss["id"]}`);
+    let counterAmount = Number(counter.innerHTML);
+    counterAmount++;
+    counter.innerHTML = counterAmount;
+    let checkoutPrice = fe("checkoutPrice");
+  }
+
   let card = ce("div", {
     className:
       " w-full h-44 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 ",
@@ -206,6 +208,7 @@ export default function cardElementPayment(product, productss) {
               "numberSection flex gap-3 w-full h-10 justify-between items-center mt-5",
             children: [
               ce("p", {
+                restAttrs: { id: "checkoutPrice" },
                 className: "productPrice font-semibold text-base leading-5",
                 innerText: `$ ${product.price}.00`,
               }),
@@ -221,9 +224,9 @@ export default function cardElementPayment(product, productss) {
                   }),
                   ce("div", {
                     className: "w-2/4 text-center font-bold",
-                    innerText: "3",
+                    innerText: "1",
                     restAttrs: {
-                      id: "counterDisplay",
+                      id: `counterDisplay${productss.id}`,
                     },
                   }),
                   ce("i", {
