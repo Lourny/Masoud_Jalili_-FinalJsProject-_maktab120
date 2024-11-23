@@ -1159,54 +1159,54 @@
     },
     {
       "0": {
-        "id": "8",
+        "id": "3",
         "title": "adidas",
-        "price": 98,
-        "order": 0,
-        "size": [
-          40
-        ],
-        "color": [
-          "blue"
-        ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/8.webp"
-      },
-      "id": "1c7e"
-    },
-    {
-      "0": {
-        "id": "10",
-        "title": "asics",
-        "price": 142,
+        "price": 110,
         "order": 0,
         "size": [
           44
         ],
         "color": [
-          "indigo"
+          "rose"
         ],
-        "brand": "asics",
-        "images": "http://localhost:5173/products/asics/2.webp"
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/3.webp"
       },
-      "id": "06ee"
+      "id": "1be6"
     },
     {
       "0": {
-        "id": "8",
+        "id": "3",
         "title": "adidas",
-        "price": 98,
+        "price": 110,
         "order": 0,
         "size": [
           44
         ],
         "color": [
-          "blue"
+          "sky"
         ],
         "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/8.webp"
+        "images": "http://localhost:5173/products/adidas/3.webp"
       },
-      "id": "c563"
+      "id": "f6e6"
+    },
+    {
+      "0": {
+        "id": "3",
+        "title": "adidas",
+        "price": 110,
+        "order": 0,
+        "size": [
+          43
+        ],
+        "color": [
+          "green"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/3.webp"
+      },
+      "id": "48d3"
     }
   ],
   "userEntry": [

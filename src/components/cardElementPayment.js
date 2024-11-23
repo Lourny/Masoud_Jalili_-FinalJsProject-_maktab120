@@ -14,6 +14,8 @@ function deleteCard(e) {
   location.reload();
 }
 
+//function for shown selected color
+
 function returnColor(product) {
   let color = "";
   product.color.forEach((element) => {
@@ -21,9 +23,9 @@ function returnColor(product) {
       color =
         "flex flex-row justify-center items-center pb-3 h-1/4 bg-orane-400";
     }
-    if (element == "yellow") {
+    if (element == "rose") {
       color =
-        "flex flex-row justify-center items-center pb-3 h-1/4 bg-yellow-400";
+        "flex flex-row justify-center items-center pb-3 h-1/4 bg-rose-400";
     }
     if (element == "sky") {
       color = "flex flex-row justify-center items-center pb-3 h-1/4 bg-sky-400";
