@@ -1,29 +1,9 @@
 import { ce } from "../Utils/create-element.js";
 import { router } from "../routes/router.js";
 import fetchFromBasket from "../api/basket.api.js";
-import clog from "../Utils/logdata.js";
-import deleteData from "../Utils/deleteData.js";
 import fe from "../Utils/findElements.js";
-import confirmationDeleteCard from "./confirmationDeleteCard.js";
+import deleteData from "../Utils/deleteData.js";
 
-//function for showing card detail
-
-function showCardDetail(e, products) {
-  let endpoint = e.target.id.toString();
-  router.navigate(`card/${endpoint}`);
-}
-//function for delete the card from db and dont shown in this page
-
-// function deleteCard(e) {
-//   let endpoint = e.target.id.toString();
-//   fetchFromBasket(endpoint).then((products) => {
-//     let product = products["0"];
-//     clog(product);
-//   });
-
-//   // deleteData(endpoint);
-//   // location.reload();
-// }
 function deleteCard(e) {
   const endpoint = e.target.id.toString();
   fetchFromBasket(endpoint).then((products) => {
@@ -33,11 +13,10 @@ function deleteCard(e) {
       children: [
         ce("div", {
           className:
-            "fixed  inset-0 bg-slate-800 bg-opacity-50 felx flex-col  justify-center items-center",
+            "fixed inset-0 bg-gray-800 bg-opacity-50 felx justify-center items-center",
           children: [
             ce("div", {
-              className:
-                "bg-white rounded-tl-[60px] rounded-tr-[60px] p-6 w-100 h-[45%] absolute inset-x-0 bottom-0 flex flex-col justify-around items-center ",
+              className: "bg-white rounded-xl p-6 w-100",
               children: [
                 ce("h1", {
                   className: "text-2xl font-bold mb-4",
@@ -45,19 +24,17 @@ function deleteCard(e) {
                 }),
                 confirmationDeleteCard(product, products),
                 ce("div", {
-                  className: "flex  w-full  justify-center gap-3",
+                  className: "flex justify-end gap-4",
                   children: [
                     ce("button", {
-                      className:
-                        "bg-slate-300 px-4 py-3  w-[45%] rounded-full font-bold",
+                      className: "bg-gary-300 px-4 py-2 rounded-md",
                       innerText: "Cancel",
                       restAttrs: {
                         id: "cancel-btn",
                       },
                     }),
                     ce("button", {
-                      className:
-                        "bg-black text-white px-4 py-3 rounded-full w-[45%]  font-bold",
+                      className: "bg-red-500 text-white px-4 py-2 rounded-md",
                       innerText: "Yes, Remove",
                       restAttrs: {
                         id: "confirm-btn",
@@ -122,9 +99,6 @@ export default function cardElementPayment(product, productss) {
           ce("img", {
             restAttrs: { src: product.images, id: product.id },
             className: `w-36 h-36 `,
-            events: {
-              click: showCardDetail,
-            },
           }),
         ],
       }),
@@ -138,14 +112,6 @@ export default function cardElementPayment(product, productss) {
               ce("h1", {
                 className: "productName font-bold text-2xl leading-6 ",
                 innerText: product.title,
-              }),
-              ce("i", {
-                className:
-                  "fa-solid fa-trash text-xl cursor-pointer hover:text-red-600",
-                restAttrs: { id: productss.id },
-                events: {
-                  click: deleteCard,
-                },
               }),
             ],
           }),

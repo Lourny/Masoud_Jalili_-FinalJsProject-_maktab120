@@ -1138,5 +1138,47 @@
       "icon": "fa-solid fa-user",
       "iconActive": "fa-solid fa-user"
     }
+  ],
+  "basket": [
+    {
+      "0": {
+        "id": "32",
+        "title": "newbalance",
+        "price": 130,
+        "order": 0,
+        "size": [
+          40
+        ],
+        "color": [
+          "sky"
+        ],
+        "brand": "newbalance",
+        "images": "http://localhost:5173/products/newbalance/8.webp"
+      },
+      "id": "3bc7"
+    },
+    {
+      "0": {
+        "id": "2",
+        "title": "adidas",
+        "price": 145,
+        "order": 0,
+        "size": [
+          44
+        ],
+        "color": [
+          "green"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/2.webp"
+      },
+      "id": "ef30"
+    }
+  ],
+  "userEntry": [
+    {
+      "id": "1",
+      "entry": 2
+    }
   ]
 }
