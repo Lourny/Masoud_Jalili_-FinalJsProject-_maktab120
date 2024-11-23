@@ -1156,23 +1156,6 @@
         "images": "http://localhost:5173/products/adidas/2.webp"
       },
       "id": "fd81"
-    },
-    {
-      "0": {
-        "id": "5",
-        "title": "adidas",
-        "price": 75,
-        "order": 0,
-        "size": [
-          42
-        ],
-        "color": [
-          "sky"
-        ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/5.webp"
-      },
-      "id": "b6f5"
     }
   ],
   "userEntry": [

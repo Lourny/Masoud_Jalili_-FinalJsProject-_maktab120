@@ -120,6 +120,10 @@ export default function cardElementPayment(product, productss) {
       counterAmount = 1;
     }
     counter.innerHTML = counterAmount;
+    let checkoutPrice = Number(product.price);
+    let cardTotalPrice = checkoutPrice * counterAmount;
+    let cardTotalPriceShown = fe(`checkoutPrice${productss["id"]}`);
+    cardTotalPriceShown.innerHTML = `$ ${cardTotalPrice}.00`;
   }
 
   function ziadCounter() {
@@ -127,7 +131,10 @@ export default function cardElementPayment(product, productss) {
     let counterAmount = Number(counter.innerHTML);
     counterAmount++;
     counter.innerHTML = counterAmount;
-    let checkoutPrice = fe("checkoutPrice");
+    let checkoutPrice = Number(product.price);
+    let cardTotalPrice = checkoutPrice * counterAmount;
+    let cardTotalPriceShown = fe(`checkoutPrice${productss["id"]}`);
+    cardTotalPriceShown.innerHTML = `$ ${cardTotalPrice}.00`;
   }
 
   let card = ce("div", {
@@ -208,7 +215,7 @@ export default function cardElementPayment(product, productss) {
               "numberSection flex gap-3 w-full h-10 justify-between items-center mt-5",
             children: [
               ce("p", {
-                restAttrs: { id: "checkoutPrice" },
+                restAttrs: { id: `checkoutPrice${productss.id}` },
                 className: "productPrice font-semibold text-base leading-5",
                 innerText: `$ ${product.price}.00`,
               }),
