@@ -1142,37 +1142,20 @@
   "basket": [
     {
       "0": {
-        "id": "2",
-        "title": "adidas",
-        "price": 145,
-        "order": 0,
-        "size": [
-          42
-        ],
-        "color": [
-          "green"
-        ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/2.webp"
-      },
-      "id": "fd81"
-    },
-    {
-      "0": {
-        "id": "2",
-        "title": "adidas",
-        "price": 145,
+        "id": "9",
+        "title": "asics",
+        "price": 56,
         "order": 0,
         "size": [
           44
         ],
         "color": [
-          "indigo"
+          "green"
         ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/2.webp"
+        "brand": "asics",
+        "images": "http://localhost:5173/products/asics/1.webp"
       },
-      "id": "960b"
+      "id": "8932"
     }
   ],
   "userEntry": [

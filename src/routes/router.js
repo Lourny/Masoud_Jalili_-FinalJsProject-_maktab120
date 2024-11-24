@@ -19,6 +19,7 @@ import fetchCardDetail from "../pages/fetchCardDetail";
 import payment from "../pages/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
 import fetchCardFromBasket from "../pages/fetchFromBasket.js";
+import checkout from "../pages/checkout/checkout.js";
 export const router = new Navigo("/");
 
 const changeContents3 = (page, data) => {
@@ -97,4 +98,7 @@ router
   })
   .on("/cart", () => {
     changeContents(ordersPage);
+  })
+  .on("/checkout", () => {
+    changeContents(checkout);
   });
