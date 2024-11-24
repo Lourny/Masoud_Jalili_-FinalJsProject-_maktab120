@@ -17,6 +17,7 @@ export default function paymentCart() {
               }),
               ce("h5", {
                 className: "font-bold text-xl ",
+                restAttrs: { id: "totalMountPayment" },
                 innerText: `$.00`,
               }),
             ],
@@ -33,24 +34,23 @@ export default function paymentCart() {
               ce("div", {
                 className: "text-white flex justify-center items-center gap-3",
                 children: [
-                  ce("div",{
-                    className:"flex justify-center items-center   ",
-                    children:[
+                  ce("div", {
+                    className: "flex justify-center items-center   ",
+                    children: [
                       ce("p", {
                         className: "text-lg font-semibold text-white",
                         innerText: "Checkout",
-                      })
-                    ]
+                      }),
+                    ],
                   }),
-                ce("div",{
-                  className:"flex justify-center items-center  ",
-                  children:[
-                    ce("i", {
-                      className: "fa-solid fa-arrow-right text-white",
-                    })
-                  ]
-                })
-                  ,
+                  ce("div", {
+                    className: "flex justify-center items-center  ",
+                    children: [
+                      ce("i", {
+                        className: "fa-solid fa-arrow-right text-white",
+                      }),
+                    ],
+                  }),
                 ],
               }),
             ],

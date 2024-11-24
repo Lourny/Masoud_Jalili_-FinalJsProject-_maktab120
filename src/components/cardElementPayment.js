@@ -123,18 +123,25 @@ export default function cardElementPayment(product, productss) {
     let checkoutPrice = Number(product.price);
     let cardTotalPrice = checkoutPrice * counterAmount;
     let cardTotalPriceShown = fe(`checkoutPrice${productss["id"]}`);
-    cardTotalPriceShown.innerHTML = `$ ${cardTotalPrice}.00`;
+    let totalMountPayment = fe("totalMountPayment");
+    totalMountPayment.innerHTML = `$ ${cardTotalPrice}.00`;
   }
 
   function ziadCounter() {
+    let toatolFinalAll = 0;
     let counter = fe(`counterDisplay${productss["id"]}`);
     let counterAmount = Number(counter.innerHTML);
     counterAmount++;
     counter.innerHTML = counterAmount;
+
     let checkoutPrice = Number(product.price);
     let cardTotalPrice = checkoutPrice * counterAmount;
-    let cardTotalPriceShown = fe(`checkoutPrice${productss["id"]}`);
-    cardTotalPriceShown.innerHTML = `$ ${cardTotalPrice}.00`;
+    toatolFinalAll += cardTotalPrice;
+    // let cardTotalPriceShown = fe(`checkoutPrice${productss["id"]}`);
+    let totalMountPayment = fe("totalMountPayment");
+
+    totalMountPayment.innerHTML = `$ ${toatolFinalAll}.00`;
+    // cardTotalPriceShown.innerHTML = `$ ${cardTotalPrice}.00`;
   }
 
   let card = ce("div", {
