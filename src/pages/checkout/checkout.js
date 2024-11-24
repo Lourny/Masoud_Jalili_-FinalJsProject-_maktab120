@@ -1,10 +1,11 @@
+import header from "../../components/checkout/checkout-header";
 import { ce } from "../../Utils/create-element";
 import clog from "../../Utils/logdata";
 
 export default function checkout() {
-  let test = ce("h1", {
-    className: "font-bold text-red-900 text-3xl",
-    innerText: "hello motherFucker",
+  let checkout2 = ce("div", {
+    className: "w-full h-full bg-pink-600 flex flex-col",
+    children: [header("checkout", true)],
   });
-  return test;
+  return checkout2;
 }
