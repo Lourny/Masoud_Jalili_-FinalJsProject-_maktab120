@@ -23,6 +23,7 @@ import checkout from "../pages/checkout/checkout.js";
 import shippingAdressPage from "../pages/checkout/shippingAdress.js";
 import shippingTypePage from "../pages/checkout/shippingType.js";
 import checkoutBeforePay from "../pages/checkout/checkout-before-pay.js";
+import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
 export const router = new Navigo("/");
 
 const changeContents3 = (page, data) => {
@@ -113,4 +114,7 @@ router
   })
   .on("/checkoutPay", () => {
     changeContents(checkoutBeforePay);
+  })
+  .on("/paymentMethod", () => {
+    changeContents(paymentMethodPage);
   });

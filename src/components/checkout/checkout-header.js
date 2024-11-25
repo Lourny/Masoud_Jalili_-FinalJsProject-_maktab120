@@ -1,7 +1,11 @@
 import { router } from "../../routes/router";
 import { ce } from "../../Utils/create-element";
 
-export default function header(text, more = false) {
+export default function header(
+  text,
+  more = false,
+  icon = "fa-solid fa-ellipsis"
+) {
   function backToCheckout() {
     router.navigate("/checkout");
   }
@@ -26,7 +30,7 @@ export default function header(text, more = false) {
           ],
         }),
         ce("i", {
-          className: "fa-solid fa-ellipsis text-2xl",
+          className: `${icon} text-2xl`,
         }),
       ],
     });
