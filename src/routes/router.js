@@ -20,10 +20,6 @@ import payment from "../pages/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
 import fetchCardFromBasket from "../pages/fetchFromBasket.js";
 import checkout from "../pages/checkout/checkout.js";
-import shippingAdressPage from "../pages/checkout/shippingAdress.js";
-import shippingTypePage from "../pages/checkout/shippingType.js";
-import checkoutBeforePay from "../pages/checkout/checkout-before-pay.js";
-import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
 export const router = new Navigo("/");
 
 const changeContents3 = (page, data) => {
@@ -105,16 +101,4 @@ router
   })
   .on("/checkout", () => {
     changeContents(checkout);
-  })
-  .on("/shippingAdress", () => {
-    changeContents(shippingAdressPage);
-  })
-  .on("/shippingType", () => {
-    changeContents(shippingTypePage);
-  })
-  .on("/checkoutPay", () => {
-    changeContents(checkoutBeforePay);
-  })
-  .on("/paymentMethod", () => {
-    changeContents(paymentMethodPage);
   });

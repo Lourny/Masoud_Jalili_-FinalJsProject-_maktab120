@@ -259,3 +259,4 @@ export default function cardElementPayment(product, productss) {
   });
   return card;
 }
+

@@ -6,7 +6,7 @@ import cardElementPayment from "../components/cardElementPayment.js";
 
 export default function fetchAllImageProducts(data) {
     let home=ce("div",{
-        className:"w-full pt-6 flex flex-col  justify-center items-center gap-4"
+        className:"w-full pt-6 flex flex-col justify-center items-center gap-4"
     });
     getProductsList(data).then(products=>{
         products.forEach(product=>{
