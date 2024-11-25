@@ -9,8 +9,8 @@ export default function shippingTypePage() {
   function goToShipping() {
     router.navigate("/shippingAdress");
   }
-  function backToCheckout() {
-    router.navigate("/checkout");
+  function goToCheckoutPay() {
+    router.navigate("/checkoutPay");
   }
 
   let MainPage = ce("div", {
@@ -36,7 +36,7 @@ export default function shippingTypePage() {
         innerText: "Apply",
         className:
           "w-full bg-black text-white px-3 py-3 rounded-[35px]   font-bold text-lg hover:bg-slate-600 ",
-        events: { click: backToCheckout },
+        events: { click: goToCheckoutPay },
       }),
     ],
   });
