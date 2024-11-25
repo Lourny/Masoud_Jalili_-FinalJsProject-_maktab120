@@ -18,8 +18,10 @@ export default function payment() {
     children: [
       //searchBox
       searchItem("My Cart"),
+      
       //fetch cards from basket
       fetchCardFromBasket(),
+
       //footer and total price
       ce("div", {
         className: "w-full h-2/8",

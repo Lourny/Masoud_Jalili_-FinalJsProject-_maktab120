@@ -1,13 +1,12 @@
 import { ce } from "../Utils/create-element.js";
 import getProductsLogo from "../api/logo.api.js";
 import logoElements from "../components/logoElements.js";
-import navbarTitle from "../components/navbarTitle.js";
+import mostTitle from "./mostTitle.js";
 import { router } from "../routes/router.js";
 function allProductsByTitle(e) {
   e.target.className += "bg-[#343A40] text-white";
   let endpoint = e.target.innerText.toLowerCase();
-  router.navigate(`home/${endpoint}`);
-  
+  router.navigate(`MostPopularpage/${endpoint}`);
 }
 export default function most() {
   let most = ce("div", {
@@ -16,27 +15,15 @@ export default function most() {
     children: [
       ce("div", {
         className: "typo w-full flex flex-row justify-between items-center",
-        children: [
-          ce("h1", {
-            className: "font-bold leading-5 text-xl",
-            innerText: "Most Popular",
-          }),
-          ce("h1", {
-            className: "font-semibold MostPopularpage cursor-pointer leading-5 text-lg hover:text-slate-500",
-            innerText: "See All",
-            events:{
-              click: () => {
-                router.navigate("/MostPopularpage");
-              },
-            }
-          }),
-        ],
+        children: [],
       }),
     ],
   });
+  
+  
   let titlesContainer = ce("div", {
     className:
-      "w-full flex flex-row justify-start items-center gap-3 overflow-x-auto ",
+      "w-full flex  flex-row justify-start items-center gap-3 overflow-x-auto ",
     children: [
       ce("div", {
         className:
@@ -53,12 +40,13 @@ export default function most() {
       }),
     ],
   });
-  getProductsLogo().then(logos=>{
-    logos.forEach(logo=>{
-        let navbarTitleElements=navbarTitle(logo);
-        titlesContainer.appendChild(navbarTitleElements);
-    })
-})
+
+  getProductsLogo().then((logos) => {
+    logos.forEach((logo) => {
+      let mostTitleElements = mostTitle(logo);
+      titlesContainer.appendChild(mostTitleElements);
+    });
+  });
   most.appendChild(titlesContainer);
   return most;
 }

@@ -1142,20 +1142,20 @@
   "basket": [
     {
       "0": {
-        "id": "9",
-        "title": "asics",
-        "price": 56,
+        "id": "1",
+        "title": "adidas",
+        "price": 245,
         "order": 0,
         "size": [
-          44
+          40
         ],
         "color": [
-          "green"
+          "blue"
         ],
-        "brand": "asics",
-        "images": "http://localhost:5173/products/asics/1.webp"
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/1.webp"
       },
-      "id": "8932"
+      "id": "202c"
     }
   ],
   "userEntry": [

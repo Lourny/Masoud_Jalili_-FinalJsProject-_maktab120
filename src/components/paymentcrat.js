@@ -4,7 +4,7 @@ import { ce } from "../Utils/create-element.js";
 export default function paymentCart() {
 
 function goToCheckout(){
-  router.navigate("/checkout")
+  router.navigate("/cart")
 }
 
   let paymentCart = ce("div", {
