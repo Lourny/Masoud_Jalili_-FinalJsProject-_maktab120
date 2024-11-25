@@ -1142,19 +1142,26 @@
   "basket": [
     {
       "0": {
+        "id": "1",
+        "title": "adidas",
+        "price": 245,
         "id": "28",
         "title": "newbalance",
         "price": 210,
         "order": 0,
         "size": [
-          44
+          40
         ],
         "color": [
+          "blue"
           "sky"
         ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/1.webp"
         "brand": "newbalance",
         "images": "http://localhost:5173/products/newbalance/4.webp"
       },
+      "id": "202c"
       "id": "8331"
     },
     {
