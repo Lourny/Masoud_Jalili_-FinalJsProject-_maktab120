@@ -1142,43 +1142,43 @@
   "basket": [
     {
       "0": {
-        "id": "2",
-        "title": "adidas",
-        "price": 145,
-        "order": 0,
-        "size": [
-          42
-        ],
-        "color": [
-          "green"
-        ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/2.webp"
-      },
-      "id": "fd81"
-    },
-    {
-      "0": {
-        "id": "2",
-        "title": "adidas",
-        "price": 145,
+        "id": "28",
+        "title": "newbalance",
+        "price": 210,
         "order": 0,
         "size": [
           44
         ],
         "color": [
-          "indigo"
+          "sky"
         ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/2.webp"
+        "brand": "newbalance",
+        "images": "http://localhost:5173/products/newbalance/4.webp"
       },
-      "id": "960b"
+      "id": "8331"
+    },
+    {
+      "0": {
+        "id": "21",
+        "title": "converse",
+        "price": 230,
+        "order": 0,
+        "size": [
+          44
+        ],
+        "color": [
+          "sky"
+        ],
+        "brand": "converse",
+        "images": "http://localhost:5173/products/converse/5.jpg"
+      },
+      "id": "4d98"
     }
   ],
   "userEntry": [
     {
       "id": "1",
-      "entry": 2
+      "entry": 1
     }
   ]
 }
