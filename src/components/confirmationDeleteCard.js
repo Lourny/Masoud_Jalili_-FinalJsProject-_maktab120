@@ -90,21 +90,21 @@ function returnColor(product) {
 export default function cardElementPayment(product, productss) {
   let card = ce("div", {
     className:
-      " w-full h-44 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 ",
+      " w-full h-36 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 my-3 ",
     children: [
       ce("div", {
         className:
-          "imageContainer w-1/3 h-full rounded-3xl p-2 bg-[#ECEFF1] flex justify-center items-center",
+          "imageContainer w-44 h-full rounded-3xl p-2  flex justify-center items-center overflow-hidden",
         children: [
           ce("img", {
             restAttrs: { src: product.images, id: product.id },
-            className: `w-36 h-36 `,
+            className: "w-44 h-36 ",
           }),
         ],
       }),
       ce("div", {
         className:
-          "detailContainer flex flex-col justify-between items-start gap-2 w-2/3",
+          "detailContainer flex flex-col justify-between items-start gap-2 w-2/3 h-full",
         children: [
           ce("div", {
             className: "flex flex-row justify-between items-center w-full",
@@ -118,7 +118,7 @@ export default function cardElementPayment(product, productss) {
 
           ce("div", {
             className:
-              "flex flex-row justify-start items-center w-full  gap-2  py-2 mt-2",
+              "flex flex-row justify-start items-center w-full  gap-2  py-2 ",
             children: [
               ce("div", {
                 className:
@@ -152,7 +152,7 @@ export default function cardElementPayment(product, productss) {
 
           ce("div", {
             className:
-              "numberSection flex gap-3 w-full h-10 justify-between items-center mt-5",
+              "numberSection flex gap-3 w-full h-10 justify-between items-center  ",
             children: [
               ce("p", {
                 className: "productPrice font-semibold text-base leading-5",
