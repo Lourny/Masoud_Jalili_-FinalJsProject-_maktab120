@@ -17,7 +17,7 @@ function createSize(product) {
     let clickedSize = e.target.innerText;
     localStorage.setItem("orderedSize", JSON.stringify(clickedSize));
   }
-
+  //closure reading ------------
   let sizeContainer = ce("div", {
     className: "w-full flex flex-row justify-center items-center gap-2",
   });

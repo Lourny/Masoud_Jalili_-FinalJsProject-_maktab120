@@ -1142,26 +1142,43 @@
   "basket": [
     {
       "0": {
-        "id": "9",
-        "title": "asics",
-        "price": 56,
+        "id": "28",
+        "title": "newbalance",
+        "price": 210,
         "order": 0,
         "size": [
           44
         ],
         "color": [
-          "green"
+          "sky"
         ],
-        "brand": "asics",
-        "images": "http://localhost:5173/products/asics/1.webp"
+        "brand": "newbalance",
+        "images": "http://localhost:5173/products/newbalance/4.webp"
       },
-      "id": "8932"
+      "id": "8331"
+    },
+    {
+      "0": {
+        "id": "4",
+        "title": "adidas",
+        "price": 223,
+        "order": 0,
+        "size": [
+          39
+        ],
+        "color": [
+          "sky"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/4.webp"
+      },
+      "id": "0dde"
     }
   ],
   "userEntry": [
     {
       "id": "1",
-      "entry": 2
+      "entry": 1
     }
   ]
 }
