@@ -1,4 +1,5 @@
 import { ce } from "../Utils/create-element.js";
+import clog from "../Utils/logdata.js";
 import { router } from "../routes/router.js";
 
 //function for showing card detail
@@ -8,6 +9,7 @@ function showCardDetail(e, products) {
 }
 export default function cardActiveOrder(product, productss) {
   //function for shown selected color----------------------------
+
   function returnColor(product) {
     let color = "";
     product.color.forEach((element) => {
@@ -141,7 +143,7 @@ export default function cardActiveOrder(product, productss) {
               }),
               ce("div", {
                 className:
-                  "w-1/2 rounded-full bg-black flex justify-center items-center px-1 py-1",
+                  "w-[45%] rounded-full bg-black flex justify-center items-center px-2 py-2",
                 children: [
                   ce("div", {
                     className: "text-center font-semibold  text-sm text-white",

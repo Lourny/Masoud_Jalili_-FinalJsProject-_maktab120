@@ -1,11 +1,12 @@
 //empty order
+import { ce } from "../../Utils/create-element";
 export default function EmptyOrderPage() {
   let EmptyOrder = ce("div", {
     className:
       "w-full h-full felx flex-col justify-items-center content-center",
     children: [
       ce("img", {
-        className: "w-[80%]",
+        className: "w-[80%] opacity-20",
         restAttrs: {
           src: "../../../src/assets/image/clipboard.webp",
         },

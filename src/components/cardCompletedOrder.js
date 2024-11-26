@@ -30,11 +30,11 @@ export default function cardCompleredOrder(product, productss) {
 
   let card = ce("div", {
     className:
-      " w-full h-52 p-3 rounded-xl bg-white flex flex-row justify-center items-start gap-3 ",
+      " w-full  p-3 rounded-xl flex flex-row justify-center items-start gap-3  my-3 ",
     children: [
       ce("div", {
         className:
-          "imageContainer w-1/3 h-full rounded-3xl p-2 bg-[#ECEFF1] flex justify-center items-center",
+          "imageContainer w-1/3 h-36 rounded-3xl p-2 bg-[#ECEFF1] flex justify-center items-center overflow-hidden",
         children: [
           ce("img", {
             restAttrs: { src: product.images, id: product.id },
@@ -65,7 +65,7 @@ export default function cardCompleredOrder(product, productss) {
             children: [
               ce("div", {
                 className:
-                  "  relative after:absolute pr-2 after:w-full after:h-full  after:top-0 after:left-1.5 after:border-r-2 after:border-r-solid after:border-r-slate-400 after:pointer-events-none",
+                  "  relative after:absolute pr-2 after:w-full after:h-full  after:top-0 after:left-1.5 after:border-r-2 after:border-r-solid after:border-r-slate-200 after:pointer-events-none",
                 children: [
                   ce("ul", {
                     className: " flex justify-start items-center gap-1",
@@ -74,8 +74,8 @@ export default function cardCompleredOrder(product, productss) {
                         className: returnColor(product),
                       }),
                       ce("h1", {
-                        className: "font-semibold text-slate-700 text-lg",
-                        innerText: product.color,
+                        className: "font-bold text-sm text-slate-400 ",
+                        innerText: "color",
                       }),
                     ],
                   }),
@@ -85,21 +85,32 @@ export default function cardCompleredOrder(product, productss) {
                 className: "pl-1",
                 children: [
                   ce("h5", {
-                    className: "font-semibold text-slate-700 text-lg pr-2",
-                    innerText: `Size=${product.size}`,
+                    className: "font-bold text-sm text-slate-400 pr-2",
+                    innerText: `Size=42`,
                   }),
                 ],
               }),
               ce("div", {
                 className:
-                  "  relative after:absolute  after:w-full after:h-full  after:top-0 after:right-1.5 after:border-l-2 after:border-l-solid after:border-l-slate-400 after:pointer-events-none",
+                  "  relative after:absolute  after:w-full after:h-full  after:top-0 after:right-1.5 after:border-l-2 after:border-l-solid after:border-l-slate-200 after:pointer-events-none",
                 children: [
                   ce("ul", {
-                    className: " flex justify-start items-center gap-1",
+                    className: " flex justify-start items-center gap-1 ",
                     children: [
                       ce("h5", {
-                        className: "font-semibold text-slate-700 text-lg pr-1",
-                        innerText: `Qty=${product.size}`,
+                        className: "font-bold text-sm text-slate-400  pr-1",
+                        innerText: `Qty=`,
+                      }),
+                      ce("div", {
+                        className:
+                          "w-6 h-6 rounded-full  border-2 border-slate-400 text-slate-400 flex justify-center items-center ",
+                        children: [
+                          ce("p", {
+                            innerText: "1",
+                            className:
+                              "w-full h-full text-slate-400  flex justify-center items-center",
+                          }),
+                        ],
                       }),
                     ],
                   }),
@@ -109,10 +120,10 @@ export default function cardCompleredOrder(product, productss) {
           }),
 
           ce("div", {
-            className: "bg-slate-300 rounded-md",
+            className: "bg-slate-300 rounded-md py-2 px-1",
             children: [
               ce("h3", {
-                className: "py-1 px-2",
+                className: " text-xs font-bold text-slate-600",
                 innerText: "Completed",
               }),
             ],
@@ -120,22 +131,23 @@ export default function cardCompleredOrder(product, productss) {
 
           ce("div", {
             className:
-              "numberSection flex gap-3 w-full h-10 justify-between items-center mt-5",
+              "numberSection flex gap-3 w-full h-10 justify-between items-center ",
             children: [
               ce("p", {
                 restAttrs: { id: `checkoutPrice${productss.id}` },
-                className: "productPrice font-bold text-xl leading-5",
+                className:
+                  "productPrice font-bold text-sm text-slate-600 leading-5",
                 innerText: `$ ${product.price}.00`,
               }),
               ce("div", {
                 className:
-                  "w-1/2 rounded-full bg-black flex justify-center items-center px-2 py-2",
+                  "w-[45%] rounded-full bg-black flex justify-center items-center px-2 py-2",
                 children: [
                   ce("div", {
-                    className: "text-center font-bold  text-white",
-                    innerText: "Track Order",
+                    className: "text-center font-semibold  text-sm text-white",
+                    innerText: "Buy Again",
                     restAttrs: {
-                      id: "Buy Again",
+                      id: "TrackOrder",
                     },
                   }),
                 ],

@@ -27,6 +27,9 @@ import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
 import MostPopularpage from "../pages/Mostpage.js";
 import cardElementWishList from "../pages/WishList/cardElementWishList.js";
 import searchPage from "../pages/search/searchPage.js";
+import cardCompleredOrder from "../components/cardCompletedOrder.js";
+import cardActiveOrder from "../components/cardActiveOrder.js";
+import ordersCompletePage from "../pages/Orders/ordersCompletePage.js";
 
 export const router = new Navigo("/");
 
@@ -134,7 +137,15 @@ router
   .on("/cardElementWishList", () => {
     changeContents(cardElementWishList);
   })
+
   .on("/searchPage", () => {
     changeContents(searchPage);
+  })
+
+  .on("/cardActiveOrder", () => {
+    changeContents(ordersPage);
+  })
+  .on("/completedOrders", () => {
+    changeContents(ordersCompletePage);
   });
 //test commit

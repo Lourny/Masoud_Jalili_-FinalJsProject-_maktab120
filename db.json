@@ -1142,20 +1142,20 @@
   "basket": [
     {
       "0": {
-        "id": "3",
+        "id": "2",
         "title": "adidas",
-        "price": 110,
+        "price": 145,
         "order": 0,
         "size": [
-          43
+          44
         ],
         "color": [
-          "sky"
+          "indigo"
         ],
         "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/3.webp"
+        "images": "http://localhost:5173/products/adidas/2.webp"
       },
-      "id": "5629"
+      "id": "1a6c"
     },
     {
       "0": {
@@ -1164,57 +1164,18 @@
         "price": 75,
         "order": 0,
         "size": [
-          42
+          40
         ],
         "color": [
-          "rose"
+          "indigo"
         ],
         "brand": "adidas",
         "images": "http://localhost:5173/products/adidas/5.webp"
       },
-      "id": "c1bb"
-    },
-    {
-      "0": {
-        "id": "56",
-        "title": "reebok",
-        "price": 330,
-        "order": 0,
-        "size": [
-          42
-        ],
-        "color": [
-          "rose"
-        ],
-        "brand": "reebok",
-        "images": "http://localhost:5173/products/reebok/8.webp"
-      },
-      "id": "ff9d"
+      "id": "4b74"
     }
   ],
   "wishList": [
-    {
-      "0": {
-        "id": "2",
-        "title": "adidas",
-        "price": 145,
-        "order": 0,
-        "size": [
-          44,
-          42,
-          40
-        ],
-        "color": [
-          "orange",
-          "sky",
-          "green",
-          "indigo"
-        ],
-        "brand": "adidas",
-        "images": "http://localhost:5173/products/adidas/2.webp"
-      },
-      "id": "4c07"
-    },
     {
       "0": {
         "id": "33",
@@ -1239,9 +1200,9 @@
     },
     {
       "0": {
-        "id": "38",
-        "title": "nike",
-        "price": 310,
+        "id": "5",
+        "title": "adidas",
+        "price": 75,
         "order": 0,
         "size": [
           44,
@@ -1254,10 +1215,32 @@
           "green",
           "indigo"
         ],
-        "brand": "nike",
-        "images": "http://localhost:5173/products/nike/6.webp"
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/5.webp"
       },
-      "id": "5590"
+      "id": "c7a1"
+    },
+    {
+      "0": {
+        "id": "6",
+        "title": "adidas",
+        "price": 45,
+        "order": 0,
+        "size": [
+          44,
+          42,
+          40
+        ],
+        "color": [
+          "orange",
+          "sky",
+          "green",
+          "indigo"
+        ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/6.webp"
+      },
+      "id": "057b"
     },
     {
       "0": {
@@ -1279,13 +1262,13 @@
         "brand": "adidas",
         "images": "http://localhost:5173/products/adidas/5.webp"
       },
-      "id": "7698"
+      "id": "5f7b"
     }
   ],
   "userEntry": [
     {
       "id": "1",
-      "entry": 2
+      "entry": 3
     }
   ]
 }

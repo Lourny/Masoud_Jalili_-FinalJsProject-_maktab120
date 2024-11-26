@@ -2,18 +2,19 @@ import searchItem from "../../components/searchitem";
 import fetchFromBasket from "../fetchFromBasket";
 import { ce } from "../../Utils/create-element";
 import footerCart from "../../components/footerCart";
-import input from "./../../components/input";
+import input from "../../components/input";
 import clog from "../../Utils/logdata";
 import EmptyOrderPage from "./EmptyOrderPage";
 import cardActiveOrder from "../../components/cardActiveOrder";
 import cardCompletedOrder from "../../components/cardCompletedOrder";
 import { router } from "../../routes/router";
+import cardCompleredOrder from "../../components/cardCompletedOrder";
 
 function checkDataBase() {
   let test = ce("div", {
-    className: "w-full h-full bg-slate-50 overflow-y-scroll ",
+    className: "w-full h-full bg-slate-50  flex flex-col overflow-y-scroll",
   });
-  fetch("http://localhost:5173/basket")
+  fetch("http://localhost:5173/wishList")
     .then((res) => res.json())
     .then((data) => {
       if (data && Object.keys(data).length === 0) {
@@ -21,14 +22,14 @@ function checkDataBase() {
       } else {
         data.forEach((products) => {
           let product = products[0];
-          test.append(cardActiveOrder(product, products));
+          test.append(cardCompleredOrder(product, products));
         });
       }
     });
   return test;
 }
 
-export default function ordersPage() {
+export default function ordersCompletePage() {
   //div contain hole page of orders
   let ordersPage = ce("div", {
     className:
@@ -67,11 +68,6 @@ export default function ordersPage() {
                 className:
                   "font-semibold text-lg cursor-pointer flex justify-center items-end pb-2 text-slate-500 hover:text-black ",
                 innerText: "Completed",
-                events: {
-                  click: () => {
-                    router.navigate("/completedOrders");
-                  },
-                },
               }),
             ],
           }),
