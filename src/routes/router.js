@@ -20,10 +20,12 @@ import payment from "../pages/payment.js";
 import ordersPage from "../pages/Orders/orders-page.js";
 import fetchCardFromBasket from "../pages/fetchFromBasket.js";
 import checkout from "../pages/checkout/checkout.js";
-import shippingAdressPage from "../pages/checkout/shippingAdress.js";
-import shippingTypePage from "../pages/checkout/shippingType.js";
-import checkoutBeforePay from "../pages/checkout/checkout-before-pay.js";
+import shippingAdressPage from "./../pages/checkout/shippingAdress";
+import shippingTypePage from "./../pages/checkout/shippingType";
+import checkoutBeforePay from "./../pages/checkout/checkout-before-pay";
 import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
+import MostPopularpage from "../pages/Mostpage.js";
+
 export const router = new Navigo("/");
 
 const changeContents3 = (page, data) => {
@@ -117,4 +119,14 @@ router
   })
   .on("/paymentMethod", () => {
     changeContents(paymentMethodPage);
+  })
+  .on("/wallet", () => {
+    changeContents(paymentMethodPage);
+  })
+  .on("/MostPopularpage", () => {
+    changeContents(MostPopularpage);
+  })
+  .on("/MostPopularpage/:brand", (params) => {
+    changeContents(MostPopularpage, params);
   });
+//test commit

@@ -2,10 +2,9 @@ import { router } from "../routes/router.js";
 import { ce } from "../Utils/create-element.js";
 
 export default function paymentCart() {
-
-function goToCheckout(){
-  router.navigate("/checkout")
-}
+  function goToCheckout() {
+    router.navigate("/checkout");
+  }
 
   let paymentCart = ce("div", {
     className:
@@ -46,7 +45,7 @@ function goToCheckout(){
                       ce("p", {
                         className: "text-lg font-semibold text-white",
                         innerText: "Checkout",
-                        events:{click:goToCheckout}
+                        events: { click: goToCheckout },
                       }),
                     ],
                   }),
