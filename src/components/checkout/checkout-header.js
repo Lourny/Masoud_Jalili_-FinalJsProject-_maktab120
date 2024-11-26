@@ -4,10 +4,11 @@ import { ce } from "../../Utils/create-element";
 export default function header(
   text,
   more = false,
-  icon = "fa-solid fa-ellipsis"
+  icon = "fa-solid fa-ellipsis",
+  routerr = "checkout"
 ) {
   function backToCheckout() {
-    router.navigate("/checkout");
+    router.navigate(`/${routerr}`);
   }
 
   let header = "";

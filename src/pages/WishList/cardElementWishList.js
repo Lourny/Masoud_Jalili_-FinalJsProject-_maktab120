@@ -40,7 +40,9 @@ export default function cardElementWishList() {
 
   let main = ce("div", {
     className: "w-full h-screen  px-6 py-3 flex flex-col gap-5",
-    children: [header("Wish List", true, "fa-solid fa-magnifying-glass")],
+    children: [
+      header("Wish List", true, "fa-solid fa-magnifying-glass", "home"),
+    ],
   });
 
   fetch("http://localhost:5173/wishList")
