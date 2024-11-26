@@ -1147,9 +1147,11 @@
         "price": 145,
         "order": 0,
         "size": [
-          44
+          40
         ],
         "color": [
+          "blue"
+          "sky"
           "indigo"
         ],
         "brand": "adidas",
@@ -1159,19 +1161,25 @@
     },
     {
       "0": {
+        "id": "5",
+        "title": "adidas",
+        "price": 75,
         "id": "9",
         "title": "asics",
         "price": 56,
         "order": 0,
         "size": [
-          44
+          41
         ],
         "color": [
           "sky"
         ],
+        "brand": "adidas",
+        "images": "http://localhost:5173/products/adidas/5.webp"
         "brand": "asics",
         "images": "http://localhost:5173/products/asics/1.webp"
       },
+      "id": "4d27"
       "id": "c0c5"
     }
   ],
