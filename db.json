@@ -1173,23 +1173,6 @@
         "images": "http://localhost:5173/products/adidas/5.webp"
       },
       "id": "c1bb"
-    },
-    {
-      "0": {
-        "id": "17",
-        "title": "converse",
-        "price": 195,
-        "order": 0,
-        "size": [
-          40
-        ],
-        "color": [
-          "indigo"
-        ],
-        "brand": "converse",
-        "images": "http://localhost:5173/products/converse/1.jpg"
-      },
-      "id": "d908"
     }
   ],
   "wishList": [
@@ -1241,7 +1224,7 @@
   "userEntry": [
     {
       "id": "1",
-      "entry": 1
+      "entry": 2
     }
   ]
 }
