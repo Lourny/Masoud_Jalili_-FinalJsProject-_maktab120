@@ -7,12 +7,16 @@ import clog from "../../Utils/logdata";
 
 export default function checkout() {
   let checkout2 = ce("div", {
-    className: "w-full h-screen flex flex-col px-6 justify-around ",
+    className: "w-full h-screen flex flex-col px-6 justify-between gap-3 py-6 ",
     children: [
-      header("checkout", true),
-      shipingAddressNav(),
-      orderList(),
-      shippingTypeNav(),
+      ce("div", {
+        children: [
+          header("checkout", true),
+          shipingAddressNav(),
+          orderList(),
+          shippingTypeNav(),
+        ],
+      }),
       ce("button", {
         innerText: "countinue to Payment",
         className:

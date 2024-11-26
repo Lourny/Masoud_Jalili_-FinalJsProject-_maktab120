@@ -6,6 +6,7 @@ import cardElement from "../components/card.js";
 import { router } from "../routes/router.js";
 import fetchCardById from "../api/fetchCardById.js";
 import addData from "../Utils/addData.js";
+import addDataToWhishList from "../Utils/addDataToWhish.js";
 // function check(e){
 //     let classEl=e.target.className;
 //     e.target.className=" ";
@@ -92,6 +93,16 @@ async function addToBasket(e) {
   });
 }
 
+async function addToWhishList(e) {
+  e.stopPropagation();
+  let endpoint = e.target.id.toString();
+  await fetchCardById(endpoint).then((res) => {
+    let ress = res[0];
+    let ressArr = [ress];
+    addDataToWhishList(ressArr);
+  });
+}
+
 export default function fetchCardDetail(data = {}) {
   let test2 = ce("div", {
     className: "w-ful h-screen ",
@@ -141,6 +152,10 @@ export default function fetchCardDetail(data = {}) {
                           ce("i", {
                             className:
                               "fa-regular fa-heart text-2xl block w-10 h-10  text-center p-2 cursor-pointer ",
+                            events: {
+                              click: addToWhishList,
+                            },
+                            restAttrs: { id: product.id },
                           }),
                         ],
                       }),

@@ -1,7 +1,11 @@
 import { ce } from "../Utils/create-element";
-import {router} from "../routes/router";
+import { router } from "../routes/router";
 
 export default function header() {
+  function goToWhishList() {
+    router.navigate("/cardElementWishList");
+  }
+
   let header = ce("div", {
     className: "w-full flex justify-between items-center m-5",
     children: [
@@ -45,9 +49,7 @@ export default function header() {
               ce("i", {
                 className: "fa-regular fa-heart  hover:text-[#EAEAEA]",
                 events: {
-                  click: () => {
-                    router.navigate("/cardElementWishList");
-                  },
+                  click: goToWhishList,
                 },
               }),
             ],
