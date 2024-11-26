@@ -4,11 +4,16 @@ import getProductsLogo from "../../api/logo.api";
 import header from "../../components/checkout/checkout-header";
 import navbarTitle from "../../components/navbarTitle";
 import { router } from "../../routes/router";
+import unlike from "./../../Utils/unlike";
 function showCardDetail(e) {
   let endpoint = e.target.id.toString();
   router.navigate(`card/${endpoint}`);
 }
-
+function unlikeData(e) {
+  const endpoint = e.target.id.toString();
+  unlike(endpoint);
+  location.reload();
+}
 export default function cardElementWishList() {
   let titlesContainer = ce("div", {
     className:
@@ -66,6 +71,10 @@ export default function cardElementWishList() {
                 ce("i", {
                   className:
                     "fa-solid fa-heart absolute top-5 right-5 text-lg bg-slate-400 rounded-full p-2 text-slate-100  ",
+                  events: {
+                    click: unlikeData,
+                  },
+                  restAttrs: { id: products["id"] },
                 }),
                 ce("img", {
                   restAttrs: { src: product.images, id: product.id },
