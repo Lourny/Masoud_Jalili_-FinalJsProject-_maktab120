@@ -26,6 +26,7 @@ import checkoutBeforePay from "./../pages/checkout/checkout-before-pay";
 import paymentMethodPage from "../pages/checkout/checkout-payment-method.js";
 import MostPopularpage from "../pages/Mostpage.js";
 import cardElementWishList from "../pages/WishList/cardElementWishList.js";
+import searchPage from "../pages/search/searchPage.js";
 
 export const router = new Navigo("/");
 
@@ -132,5 +133,8 @@ router
   })
   .on("/cardElementWishList", () => {
     changeContents(cardElementWishList);
+  })
+  .on("/searchPage", () => {
+    changeContents(searchPage);
   });
 //test commit
